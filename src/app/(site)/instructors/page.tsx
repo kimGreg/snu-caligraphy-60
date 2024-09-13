@@ -1,6 +1,6 @@
 export default function InstructorsPage() {
     return (
-      <section className="bg-white py-8">
+      <section className="py-8">
         <h2 className="text-3xl font-bold mb-4">역대 지도강사</h2>
         <ul className="space-y-4">
           <li className="border-b pb-2">

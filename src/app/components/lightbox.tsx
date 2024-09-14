@@ -1,7 +1,7 @@
 // components/Lightbox.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import LoadingSpinner from './LoadingSpinner';
 
@@ -14,6 +14,8 @@ export default function Lightbox({ imageUrl, altText }: LightboxProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // 이미지 로딩 상태
+  const imageRef = useRef<HTMLImageElement | null>(null);
+
 
   const handleImageClick = () => {
     setIsModalOpen(true);
@@ -28,6 +30,9 @@ export default function Lightbox({ imageUrl, altText }: LightboxProps) {
   };
 
   useEffect(() => {
+    if (imageRef.current && imageRef.current.complete) {
+        setIsLoaded(true);
+    }
     return () => {
       document.body.style.overflow = ''; // 컴포넌트 언마운트 시 스크롤 복구
     };
@@ -42,6 +47,7 @@ export default function Lightbox({ imageUrl, altText }: LightboxProps) {
       {!isLoaded &&  <LoadingSpinner />}
       {/* 이미지 */}
       <img
+        ref={imageRef}
         src={imageUrl}
         alt={altText}
         className={`w-full h-auto max-h-[80vh] object-contain cursor-pointer transition-transform duration-300 ${

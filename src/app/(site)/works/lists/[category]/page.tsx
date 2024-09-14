@@ -20,7 +20,7 @@ export default function CategoryWorksPage({ params }: { params: { category: stri
     instructor: '지도 강사 작품',
   };
 
-  const load_len = 5
+  const load_len = 7
 
   // 작품 데이터를 가져오는 비동기 함수
   const fetchArtworks = useCallback(async () => {
@@ -94,8 +94,8 @@ export default function CategoryWorksPage({ params }: { params: { category: stri
           ))}
         </div>
         {/* 감지 요소 */}
-        <div ref={observerRef} className="h-10 mt-4 flex justify-center items-center">
-          {hasMore ? <LoadingSpinner></LoadingSpinner> : <p></p>}
+        <div ref={observerRef} className="h-10 pt-10 flex justify-center items-center">
+          {hasMore ? <div className="relative w-16 h-16 border-4 border-gray-300 border-t-gray-500 rounded-full animate-spin"></div> : <p></p>}
         </div>
       </div>
     </section>

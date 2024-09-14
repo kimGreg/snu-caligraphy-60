@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <section className="py-10 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12">서예회 60주년 기념 소개</h1>
+        <h1 className="text-4xl font-bold text-center mb-12">서울대학교 서예회 60주년 기념전</h1>
 
         {/* 역사와 전통 섹션 */}
         <div className="mb-16">

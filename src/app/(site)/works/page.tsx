@@ -1,21 +1,45 @@
 // app/(site)/works/page.tsx
 import prisma from '@/db';
 import Link from 'next/link';
+import { Artwork } from '@prisma/client';
 
-// 작품 목록을 가져오는 함수
 async function getArtworks() {
-  const artworks = await prisma.artwork.findMany();
+    // SQL의 랜덤 정렬 기능을 활용하여 각 카테고리별로 3개의 작품을 랜덤하게 선택
+    const studentWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
+      SELECT *
+      FROM "public"."Artwork"
+      WHERE category = 'student'
+      ORDER BY RANDOM()
+      LIMIT 3;
+    `;
   
-  // 카테고리별로 작품을 분류하고, 3개의 작품을 랜덤하게 선택
-  const getRandomItems = (items: Array<any>) => items.sort(() => 0.5 - Math.random()).slice(0, 3);
-
-  const studentWorks = getRandomItems(artworks.filter((artwork) => artwork.category === 'student'));
-  const alumniWorks = getRandomItems(artworks.filter((artwork) => artwork.category === 'alumni'));
-  const supportWorks = getRandomItems(artworks.filter((artwork) => artwork.category === 'support'));
-  const instructorWorks = getRandomItems(artworks.filter((artwork) => artwork.category === 'instructor'));
-
-  return { studentWorks, alumniWorks, supportWorks, instructorWorks };
-}
+    const alumniWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
+      SELECT *
+      FROM "public"."Artwork"
+      WHERE category = 'alumni'
+      ORDER BY RANDOM()
+      LIMIT 3;
+    `;
+  
+    const supportWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
+      SELECT *
+      FROM "public"."Artwork"
+      WHERE category = 'support'
+      ORDER BY RANDOM()
+      LIMIT 3;
+    `;
+  
+    const instructorWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
+      SELECT *
+      FROM "public"."Artwork"
+      WHERE category = 'instructor'
+      ORDER BY RANDOM()
+      LIMIT 3;
+    `;
+  
+    return { studentWorks, alumniWorks, supportWorks, instructorWorks };
+  }
+  
 
 export default async function WorksPage() {
   const { studentWorks, alumniWorks, supportWorks, instructorWorks } = await getArtworks();

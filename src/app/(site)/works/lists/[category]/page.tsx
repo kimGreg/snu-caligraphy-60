@@ -19,10 +19,12 @@ export default function CategoryWorksPage({ params }: { params: { category: stri
     instructor: '지도 강사 작품',
   };
 
+  const load_len = 5
+
   // 작품 데이터를 가져오는 비동기 함수
   const fetchArtworks = useCallback(async () => {
     try {
-      const res = await fetch(`/api/works/${category}?page=${page}&limit=9`);
+      const res = await fetch(`/api/works/${category}?page=${page}&limit=${load_len}`);
       const data = await res.json();
 
       if (data.artworks.length > 0) {
@@ -32,7 +34,7 @@ export default function CategoryWorksPage({ params }: { params: { category: stri
           );
           return [...prev, ...newArtworks];
         });
-        setHasMore(data.artworks.length === 9); // limit와 일치하는 경우 더 로드할 수 있음
+        setHasMore(data.artworks.length === load_len); // limit와 일치하는 경우 더 로드할 수 있음
       } else {
         setHasMore(false);
       }

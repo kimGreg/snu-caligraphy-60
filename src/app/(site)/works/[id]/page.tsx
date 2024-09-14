@@ -27,9 +27,15 @@ export default async function ArtworkDetailPage({ params }: { params: { id: stri
         </div>
        
         <div className={`flex-1 ${isLandscape ? 'mt-4' : 'mt-4 lg:mt-0'}`}>
-          <h2 className="text-4xl mb-4">{artwork.title}</h2>
-          <h3 className="text-2xl mb-4">{artwork.writer}</h3>
-          <p className="text-lg" style={{ whiteSpace: "pre-wrap" }}>{artwork.description}</p>
+
+        <div className="text-end px-10">
+            <h2 className="text-3xl mb-3 font-bold">{artwork.title}</h2>
+            <h4  className="text-lg text-gray-600 mb-3">{artwork.style} </h4>
+            <h3 className="text-lg  mb-10">{artwork.writer} • {artwork.writerDept}</h3>
+        </div>
+        
+
+        <p className="text-lg" style={{ whiteSpace: "pre-wrap" }}>{artwork.description}</p>
         </div>
       </div>
     </section>

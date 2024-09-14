@@ -40,7 +40,7 @@ export default async function WorksPage() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-600">{artwork.authorName}</p>
+                  <p className="text-sm text-gray-600">{artwork.writer}</p>
                 </div>
               </div>
             </Link>
@@ -65,7 +65,7 @@ export default async function WorksPage() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-600">{artwork.authorName}</p>
+                  <p className="text-sm text-gray-600">{artwork.writer}</p>
                 </div>
               </div>
             </Link>
@@ -90,7 +90,7 @@ export default async function WorksPage() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-600">{artwork.authorName}</p>
+                  <p className="text-sm text-gray-600">{artwork.writer}</p>
                 </div>
               </div>
             </Link>
@@ -115,7 +115,7 @@ export default async function WorksPage() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-600">{artwork.authorName}</p>
+                  <p className="text-sm text-gray-600">{artwork.writer}</p>
                 </div>
               </div>
             </Link>

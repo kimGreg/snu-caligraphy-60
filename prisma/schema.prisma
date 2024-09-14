@@ -17,6 +17,9 @@ model Artwork {
   id          Int      @id @default(autoincrement())
   title       String
   writer      String
+  writerDept  String   @default("")
+  writerBio   String   @default("")
+  style       String   @default("")
   description String
   imageUrl    String
   category    String

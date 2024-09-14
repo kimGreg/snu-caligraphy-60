@@ -5,7 +5,7 @@ export default function ProfessorSpeech() {
         <div className="max-w-2xl justify-center">
         <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회 60주년 기념전 축사</h2>
 
-        <p className="text-right p-10">서울대학교 서예회 지도교수 </p>
+        <p className="text-right pt-3 pb-10">서울대학교 서예회 지도교수 </p>
 
         <p className="text-gray-700 leading-relaxed">
         존경하는 내빈 여러분, 사랑하는 서예회 회원 및 동문 여러분, <br/><br/>

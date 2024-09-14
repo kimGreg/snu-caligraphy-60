@@ -18,7 +18,7 @@ export default function Header() {
     <header className="bg-gray-800 text-white shadow-md relative z-20">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* 로고 */}
-        <h1 className="text-2xl font-bold">서울대학교 서예회 회갑전</h1>
+        <h1 className="text-2xl font-bold">서울대학교 서예회 60주년 기념전</h1>
 
         {/* 햄버거 메뉴 버튼 (모바일용) */}
         <div className="lg:hidden">

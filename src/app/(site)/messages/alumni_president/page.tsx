@@ -8,7 +8,7 @@ export default function AlumniPresidentSpeech() {
         <div className="max-w-2xl justify-center">
         <h2 className="text-2xl font-bold mb-4 text-center">축사</h2>
 
-        <p className="text-right pt-3">동문회장 노태천</p>
+        <p className="text-right pt-3 pb-10">동문회장 노태천</p>
 
 
         <p className="text-gray-700 leading-relaxed">

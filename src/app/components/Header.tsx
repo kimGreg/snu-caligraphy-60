@@ -47,7 +47,7 @@ export default function Header() {
         <nav
           className={`${
             isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 lg:opacity-100 lg:max-h-full'
-          } lg:flex lg:items-center lg:space-x-6 lg:ml-auto absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-gray-800 lg:bg-transparent overflow-hidden transition-all duration-300 ease-in-out p-4 lg:p-0 z-10`}
+          } lg:flex lg:items-center lg:space-x-6 lg:ml-auto absolute lg:relative top-14 lg:top-0 left-0 w-full lg:w-auto bg-gray-800 lg:bg-transparent overflow-hidden transition-all duration-300 ease-in-out p-4 lg:p-0 z-10`}
         >
           <Link href="/" onClick={closeMenu} className="block py-2 lg:py-0 lg:inline-block hover:text-gray-300">
             소개글

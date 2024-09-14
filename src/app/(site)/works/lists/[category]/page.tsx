@@ -92,7 +92,7 @@ export default function CategoryWorksPage({ params }: { params: { category: stri
         </div>
         {/* 감지 요소 */}
         <div ref={observerRef} className="h-10 mt-4 flex justify-center items-center">
-          {hasMore ? <p>Loading...</p> : <p>No more artworks</p>}
+          {hasMore ? <p>불러오는 중...</p> : <p></p>}
         </div>
       </div>
     </section>

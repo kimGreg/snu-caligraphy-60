@@ -5,15 +5,20 @@ import Tabs from '@/app/components/Tabs';
 
 const tabs = [
     {
-      label: '총장',
+      label: '서울대학교 총장',
       path: '/messages/president',
       content: '총장의 축사 내용입니다. 환영합니다...',
     },
     {
-      label: '서예회총동문회장',
+      label: '서예회 동문회장',
       path: '/messages/alumni_president',
       content: '서예회총동문회장의 축사 내용입니다. 뜻깊은 자리입니다...',
     },
+    {
+        label: '심정 박주영',
+        path: '/messages/simjung',
+        content: '심정 박주영 선생님의 축사 내용입니다. 함께해주셔서 감사합니다...',
+      },
     {
       label: '지도교수',
       path: '/messages/professor',
@@ -34,11 +39,14 @@ export default function CongratulatorySpeechesLayout({
   }) {
   
     return (
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col space-y-10 pb-12">
         <nav className="">
           <Tabs tabs={tabs} />
         </nav>
+        <div className="p-2">
         {children}
+        </div>
+       
       </div>
     );
   }

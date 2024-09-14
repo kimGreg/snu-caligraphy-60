@@ -26,16 +26,16 @@ export default async function ArtworkDetailPage({ params }: { params: { id: stri
           <Lightbox imageUrl={artwork.imageUrl} altText={artwork.title} />
         </div>
        
-        <div className={`flex-1 ${isLandscape ? 'mt-4' : 'mt-4 lg:mt-0'}`}>
+        <div className={`flex-1 ${isLandscape ? 'mt-1' : 'mt-1 lg:mt-0'} px-4`}>
 
-        <div className="text-end px-10">
-            <h2 className="text-3xl mb-3 font-bold">{artwork.title}</h2>
-            <h4  className="text-lg text-gray-600 mb-3">{artwork.style} </h4>
-            <h3 className="text-lg  mb-10">{artwork.writer} • {artwork.writerDept}</h3>
-        </div>
-        
+            <div className="text-end">
+                <h2 className="text-2xl mb-3 font-bold">{artwork.title}</h2>
+                <h4  className="text-lg text-gray-600 mb-3">{artwork.style} </h4>
+                <h3 className="text-lg  mb-10">{artwork.writer} • {artwork.writerDept}</h3>
+            </div>
+            
 
-        <p className="text-lg" style={{ whiteSpace: "pre-wrap" }}>{artwork.description}</p>
+            <p className="text-lg" style={{ whiteSpace: "pre-wrap" }}>{artwork.description}</p>
         </div>
       </div>
     </section>

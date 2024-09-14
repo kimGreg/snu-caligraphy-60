@@ -7,6 +7,17 @@ export default function AboutPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12">서울대학교 서예회 60주년 기념전</h1>
 
+         {/* 갤러리 섹션 */}
+         <div className="mb-16">
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+            {/* 이미지들은 실제 60주년 기념 전시 사진으로 대체하세요 */}
+            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
+            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
+            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
+            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
+          </div>
+        </div>
+
         {/* 역사와 전통 섹션 */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-blue-600 mb-4">60년의 발자취</h2>
@@ -18,17 +29,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-         {/* 갤러리 섹션 */}
-         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-blue-600 mb-4">갤러리</h2>
-          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-            {/* 이미지들은 실제 60주년 기념 전시 사진으로 대체하세요 */}
-            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
-            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
-            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
-            <img src="https://via.placeholder.com/200" alt="Gallery Image" className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
-          </div>
-        </div>
+        
 
 
         {/* 목표와 가치관 섹션 */}

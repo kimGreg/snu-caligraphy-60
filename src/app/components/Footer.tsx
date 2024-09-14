@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center text-xs">
         <p>© 2024 서울대학교서예회. All rights reserved.</p>
       </div>
     </footer>

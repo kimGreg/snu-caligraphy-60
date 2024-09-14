@@ -30,7 +30,7 @@ export default function InstructorsPage() {
                 key={index}
                 className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
               >
-                <h2 className="text-xl font-bold text-blue-600">{instructor.name}</h2>
+                <h2 className="text-xl font-bold text-snublue">{instructor.name}</h2>
                 <h3 className="text-sm font-semibold text-gray-500">{instructor.title}</h3>
                 <p className="mt-2 text-gray-600">{instructor.bio}</p>
               </div>

@@ -70,7 +70,7 @@ export default async function WorksPage() {
             </Link>
           ))}
         </div>
-        <Link href="/works/lists/student" className="text-blue-500 hover:underline">
+        <Link href="/works/lists/student" className="text-snublue hover:underline">
           모두 보기
         </Link>
 
@@ -95,7 +95,7 @@ export default async function WorksPage() {
             </Link>
           ))}
         </div>
-        <Link href="/works/lists/alumni" className="text-blue-500 hover:underline">
+        <Link href="/works/lists/alumni" className="text-snublue hover:underline">
         모두 보기
         </Link>
 
@@ -120,7 +120,7 @@ export default async function WorksPage() {
             </Link>
           ))}
         </div>
-        <Link href="/works/lists/support" className="text-blue-500 hover:underline">
+        <Link href="/works/lists/support" className="text-snublue hover:underline">
         모두 보기
         </Link>
 
@@ -145,7 +145,7 @@ export default async function WorksPage() {
             </Link>
           ))}
         </div>
-        <Link href="/works/lists/instructor" className="text-blue-500 hover:underline">
+        <Link href="/works/lists/instructor" className="text-snublue hover:underline">
         모두 보기
         </Link>
       </div>

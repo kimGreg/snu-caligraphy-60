@@ -21,8 +21,27 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+/* 페이지 전체에 오버 스크롤 방지 적용 */
+html,
+body {
+overscroll-behavior-y: contain; /* 세로 스크롤만 제한 */
+  margin: 0; /* 기본 마진 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  overflow-x: hidden; 
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Custom scrollbar-hide class to hide scrollbars */
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+display: none; /* Chrome, Safari, and Opera */
 }

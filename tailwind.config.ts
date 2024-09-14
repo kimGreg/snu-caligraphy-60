@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        snublue: "#0f0f70",
+        snublue_light: "#233b81",
       },
     },
   },

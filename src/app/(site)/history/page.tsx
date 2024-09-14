@@ -35,13 +35,13 @@ export default function HistoryPage() {
     <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-8">서예회 연혁</h1>
-          <div className="relative border-l-4 border-blue-500 pl-6">
+          <div className="relative border-l-4 border-snublue pl-6">
             {historyData.map((event, index) => (
               <div
                 key={index}
-                className="mb-10 ml-4 relative before:absolute before:w-3 before:h-3 before:bg-blue-500 before:rounded-full before:left-[-1.6rem] before:top-[10px]"
+                className="mb-10 ml-4 relative before:absolute before:w-3 before:h-3 before:bg-snublue before:rounded-full before:left-[-1.6rem] before:top-[10px]"
               >
-                <h2 className="text-xl font-semibold text-blue-600">{event.year}</h2>
+                <h2 className="text-xl font-semibold text-snublue">{event.year}</h2>
                 <h3 className="text-lg font-bold text-gray-800">{event.title}</h3>
                 <p className="text-gray-600">{event.description}</p>
               </div>

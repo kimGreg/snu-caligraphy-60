@@ -33,8 +33,9 @@ export default function RootLayout({
     <html lang="" className={notoSerifKr.className}>
       <body className="bg-gray-50 flex flex-col min-h-screen">
       <Header />
+      <div className="pb-14"></div>
       <main className="flex-grow container mx-auto p-4">{children}</main>
-      <Footer />
+      {/* <Footer /> */}
       </body>
     </html>
   );

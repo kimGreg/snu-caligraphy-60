@@ -21,12 +21,12 @@ export default async function ArtworkDetailPage({ params }: { params: { id: stri
 
   return (
     <section className="py-10">
-      <div className={`max-w-6xl mx-auto p-6 flex ${isLandscape ? 'flex-col' : 'flex-col lg:flex-row'} gap-8`}>
+      <div className={`max-w-6xl mx-auto p-2 lg:p-6 flex ${isLandscape ? 'flex-col' : 'flex-col lg:flex-row'} gap-8`}>
         <div className={`relative ${isLandscape ? 'w-full' : 'flex-1'}  overflow-hidden rounded-lg mb-6 max-w-full max-h-[80vh] mx-auto`}>
           <Lightbox imageUrl={artwork.imageUrl} altText={artwork.title} />
         </div>
        
-        <div className={`flex-1 ${isLandscape ? 'mt-1' : 'mt-1 lg:mt-0'} px-4`}>
+        <div className={`flex-1 ${isLandscape ? 'mt-1' : 'mt-1 lg:mt-0'} lg:px-5 px-0`}>
 
             <div className="text-end">
                 <h2 className="text-2xl mb-3 font-bold">{artwork.title}</h2>

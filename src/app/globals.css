@@ -45,3 +45,5 @@ overscroll-behavior-y: contain; /* 세로 스크롤만 제한 */
 .scrollbar-hide::-webkit-scrollbar {
 display: none; /* Chrome, Safari, and Opera */
 }
+
+

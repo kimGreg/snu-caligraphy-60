@@ -3,12 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-import snu_logo from "@/public/snu_logo.svg"
+import snu_logo from "@/public/snu_logo.svg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // 모달이 보이는지 여부를 제어
+  const [isVisible, setIsVisible] = useState(false);
 
   // 모달 열기
   const openMenu = () => {
@@ -34,23 +33,21 @@ export default function Header() {
   }, [isOpen, isVisible]);
 
   return (
-    <header className="fixed top-0 left-0 w-full text-white z-20 bg-snublue_light">
+    <header className="fixed top-0 left-0 w-full text-white z-20 bg-snublue_light shadow-md">
       <div className="container mx-auto flex items-center justify-between pl-3 pr-4 py-3 relative">
         {/* 로고 */}
         <div className="flex items-center relative space-x-2">
-            <Image src={snu_logo} alt="logo" width={47} height={47}></Image>
-            <div>
-                <h1 className="text-sm font-bold">서울대학교 서예회</h1>
-                <h1 className="text-md font-bold">60주년 기념전</h1>
-            </div>
+          <Image src={snu_logo} alt="logo" width={47} height={47} />
+          <div>
+            <h1 className="text-sm font-bold">서울대학교 서예회</h1>
+            <h1 className="text-md font-bold">60주년 기념전</h1>
+          </div>
         </div>
-        
-        
+
         {/* 햄버거 메뉴 버튼 (모바일용) */}
         <div className="lg:hidden z-40 relative">
           <button onClick={isOpen ? closeMenu : openMenu} className="text-white focus:outline-none">
             {isOpen ? (
-              // 닫기 버튼 아이콘
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -58,15 +55,9 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              // 햄버거 메뉴 아이콘
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -74,19 +65,14 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
           </button>
         </div>
 
         {/* 네비게이션 메뉴 (데스크탑용) */}
-        <nav className="hidden lg:flex lg:items-center lg:space-x-6 lg:ml-auto ">
+        <nav className="hidden lg:flex lg:items-center lg:space-x-6 lg:ml-auto">
           <Link href="/" className="hover:text-gray-300">
             소개글
           </Link>
@@ -117,7 +103,7 @@ export default function Header() {
             className={`p-6 space-y-4 w-64 text-center relative transform transition-transform duration-300 ${
               isOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
             }`}
-            onClick={(e) => e.stopPropagation()} // 클릭 이벤트 전파 방지
+            onClick={(e) => e.stopPropagation()}
           >
             <Link href="/" onClick={closeMenu} className="block py-2 hover:text-gray-300">
               소개글

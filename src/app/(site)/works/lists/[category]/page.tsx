@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Artwork } from '@prisma/client';
+import LoadingSpinner from '@/app/components/LoadingSpinner';
 
 export default function CategoryWorksPage({ params }: { params: { category: string } }) {
   const { category } = params;
@@ -94,7 +95,7 @@ export default function CategoryWorksPage({ params }: { params: { category: stri
         </div>
         {/* 감지 요소 */}
         <div ref={observerRef} className="h-10 mt-4 flex justify-center items-center">
-          {hasMore ? <p>불러오는 중...</p> : <p></p>}
+          {hasMore ? <LoadingSpinner></LoadingSpinner> : <p></p>}
         </div>
       </div>
     </section>

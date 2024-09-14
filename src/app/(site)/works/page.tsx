@@ -47,7 +47,7 @@ export default async function WorksPage() {
           ))}
         </div>
         <Link href="/works/lists/student" className="text-blue-500 hover:underline">
-          더 자세히 보기
+          모두 보기
         </Link>
 
         {/* 졸업생 작품 섹션 */}
@@ -72,7 +72,7 @@ export default async function WorksPage() {
           ))}
         </div>
         <Link href="/works/lists/alumni" className="text-blue-500 hover:underline">
-          더 자세히 보기
+        모두 보기
         </Link>
 
         {/* 찬조 작품 섹션 */}
@@ -97,7 +97,7 @@ export default async function WorksPage() {
           ))}
         </div>
         <Link href="/works/lists/support" className="text-blue-500 hover:underline">
-          더 자세히 보기
+        모두 보기
         </Link>
 
         {/* 지도 강사 작품 섹션 */}
@@ -122,7 +122,7 @@ export default async function WorksPage() {
           ))}
         </div>
         <Link href="/works/lists/instructor" className="text-blue-500 hover:underline">
-          더 자세히 보기
+        모두 보기
         </Link>
       </div>
     </section>

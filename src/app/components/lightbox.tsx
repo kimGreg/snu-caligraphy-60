@@ -3,6 +3,8 @@
 
 import { useState, useEffect } from 'react';
 
+import LoadingSpinner from './LoadingSpinner';
+
 interface LightboxProps {
   imageUrl: string;
   altText: string;
@@ -37,11 +39,7 @@ export default function Lightbox({ imageUrl, altText }: LightboxProps) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {!isLoaded && (
-        <div className="flex items-center justify-center h-[80vh] bg-gray-200 absolute inset-0">
-          <p className="text-lg text-gray-500">Loading...</p>
-        </div>
-      )}
+      {!isLoaded &&  <LoadingSpinner />}
       {/* 이미지 */}
       <img
         src={imageUrl}

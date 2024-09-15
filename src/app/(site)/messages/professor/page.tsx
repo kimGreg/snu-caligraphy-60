@@ -7,7 +7,7 @@ export default function ProfessorSpeech() {
 
         <p className="text-right pt-3 pb-10">서울대학교 서예회 지도교수 </p>
 
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-900 leading-relaxed">
         존경하는 내빈 여러분, 사랑하는 서예회 회원 및 동문 여러분, <br/><br/>
 
 서울대학교 서예회가 60주년을 맞이하는 오늘, 이 뜻깊은 자리에 함께하게 되어 매우 기쁘고 감회가 깊습니다. 지난 60년 동안 서예회는 단순한 학술 동아리를 넘어, 우리 전통 예술을 지키고 발전시키는 중요한 역할을 수행해 왔습니다. 서예회는 예술적 탐구와 열정이 가득한 공간으로, 많은 인재들이 이곳에서 배움의 길을 닦고, 서예의 깊이를 깨달으며 성장해 왔습니다. <br/><br/>

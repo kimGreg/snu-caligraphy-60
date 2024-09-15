@@ -36,13 +36,13 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full text-white z-20 bg-snublue_light shadow-md">
       <div className="container mx-auto flex items-center justify-between pl-3 pr-4 py-3 relative">
         {/* 로고 */}
-        <div className="flex items-center relative space-x-2">
+        <Link href="/" className="flex items-center relative space-x-2">
           <Image src={snu_logo} alt="logo" width={47} height={47} />
           <div>
             <h1 className="text-sm font-bold">서울대학교 서예회</h1>
             <h1 className="text-md font-bold">60주년 기념전</h1>
           </div>
-        </div>
+        </Link>
 
         {/* 햄버거 메뉴 버튼 (모바일용) */}
         <div className="lg:hidden z-40 relative">
@@ -73,7 +73,10 @@ export default function Header() {
 
         {/* 네비게이션 메뉴 (데스크탑용) */}
         <nav className="hidden lg:flex lg:items-center lg:space-x-6 lg:ml-auto">
-          <Link href="/" className="hover:text-gray-300">
+        <Link href="/" className="hover:text-gray-300">
+            홈
+          </Link>
+          <Link href="/about" className="hover:text-gray-300">
             소개글
           </Link>
           <Link href="/history" className="hover:text-gray-300">
@@ -106,6 +109,9 @@ export default function Header() {
             onClick={(e) => e.stopPropagation()}
           >
             <Link href="/" onClick={closeMenu} className="block py-2 hover:text-gray-300">
+              홈
+            </Link>
+            <Link href="/about" onClick={closeMenu} className="block py-2 hover:text-gray-300">
               소개글
             </Link>
             <Link href="/history" onClick={closeMenu} className="block py-2 hover:text-gray-300">

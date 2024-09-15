@@ -31,6 +31,7 @@ export default async function ArtworkDetailPage({ params }: { params: { id: stri
           style={artwork.style}
           writer={artwork.writer}
           writerDept={artwork.writerDept}
+          writerBio={artwork.writerBio}
           description={artwork.description}
         />
       </div>

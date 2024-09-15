@@ -98,8 +98,8 @@ export default function HistoryPage() {
               className="mb-10 ml-4 relative before:absolute before:w-3 before:h-3 before:bg-snublue before:rounded-full before:left-[-1.6rem] before:top-[10px] opacity-0 transform translate-y-10 transition-all duration-500"
             >
               <h2 className="text-xl font-semibold text-snublue">{event.year}</h2>
-              <h3 className="text-lg font-bold text-gray-800">{event.title}</h3>
-              <p className="text-gray-600">{event.description}</p>
+              <h3 className="text-lg font-bold text-gray-900">{event.title}</h3>
+              <p className="text-gray-800">{event.description}</p>
             </div>
           ))}
         </div>

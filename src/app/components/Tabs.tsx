@@ -30,7 +30,7 @@ export default function Tabs({ tabs }: TabsProps) {
               className={`py-2 px-4 text-center whitespace-nowrap cursor-pointer ${
                 isActive
                   ? 'border-b-2 border-snublue text-snublue font-semibold'
-                  : 'text-gray-500 hover:text-snublue'
+                  : 'text-gray-700 hover:text-snublue'
               }`}
             >
               {tab.label}

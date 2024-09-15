@@ -7,7 +7,7 @@ export default function PresidentSpeech() {
 
         <p className="text-right pt-3 pb-10">서울대학교 총장 유홍림</p>
 
-        <p className="text-gray-700 leading-relaxed" style={{ whiteSpace: "pre-wrap" }}>
+        <p className="text-gray-900 leading-relaxed" style={{ whiteSpace: "pre-wrap" }}>
         존경하는 내빈 여러분, 그리고 서울대학교 서예회 회원 여러분, <br/><br/>
 
         &emsp;오늘 우리는 서울대학교 서예회 60주년 기념전을 함께 축하하기 위해 모였습니다. 지난 60년간 서울대학교 서예회는 전통과 현대를 아우르는 서예 예술의 중심에서 한국 서예의 발전을 이끌어왔습니다. 서예회가 걸어온 길은 단순히 붓을 움직이는 행위가 아니라, 우리 전통 문화의 심오한 정신을 계승하고 발전시키는 중요한 여정이었습니다.<br/><br/>

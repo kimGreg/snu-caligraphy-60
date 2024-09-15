@@ -7,7 +7,7 @@ export default function ClubPresidentSpeech() {
 
         <p className="text-right pt-3 pb-10">서울대학교 서예회 회장 이상연</p>
 
-        <p className="text-gray-700 leading-relaxed" style={{ whiteSpace: "pre-wrap" }}>
+        <p className="text-gray-900 leading-relaxed" style={{ whiteSpace: "pre-wrap" }}>
         존경하는 내빈 여러분, 그리고 사랑하는 서울대학교 서예회 회원 및 동문 여러분, <br/> <br/>
 
         오늘 우리는 서울대학교 서예회 60주년 기념전을 맞이하여 이 뜻깊은 자리에 함께 모였습니다. 서예회의 회장으로서 이 자리를 빌려 지난 60년 동안 서예회가 걸어온 길을 되돌아보고, 함께해주신 모든 분들께 감사의 말씀을 전할 수 있어 매우 영광스럽고 감회가 깊습니다. 서예회는 단순한 동아리 이상의 의미를 지니고, 우리의 전통을 지키고 새로운 시대와 소통하며 예술적 가치를 이어가는 중요한 공간이었습니다. <br/> <br/>

@@ -73,7 +73,7 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
             </div>
             <div className="writer-bio-content">
             
-            <p className="writer-bio-text">{writerBio}</p>
+                <p className="writer-bio-text"  style={{ whiteSpace: "pre-wrap" }}>{writerBio}</p>
             </div>
         </div>
 

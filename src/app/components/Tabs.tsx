@@ -29,7 +29,7 @@ export default function Tabs({ tabs }: TabsProps) {
               href={tab.path}
               className={`py-2 px-4 text-center whitespace-nowrap cursor-pointer ${
                 isActive
-                  ? 'border-b-2 border-snublue text-snublue font-semibold'
+                  ? 'border-b-2 border-snublue text-snublue'
                   : 'text-gray-700 hover:text-snublue'
               }`}
             >

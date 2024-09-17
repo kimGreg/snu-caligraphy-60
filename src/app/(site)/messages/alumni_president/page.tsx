@@ -8,7 +8,7 @@ export default function AlumniPresidentSpeech() {
         <div className="max-w-2xl justify-center">
             <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회 3대 기록</h2>
 
-            <p className="text-right pt-3 pb-10">서울대학교 서예회 총동창회장 故 대행(大行) 노태천(盧泰天)</p>
+            <p className="text-right pt-3 pb-2">서울대학교 서예회 총동창회장 故 대행(大行) 노태천(盧泰天)</p>
             <p className="text-right pb-10">서울대학교 공과대학 공업교육과 69학번</p>
 
 

@@ -5,7 +5,8 @@ export default function ClubPresidentSpeech() {
         <div className="max-w-2xl justify-center">
         <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회 60주년 기념전 축사</h2>
 
-        <p className="text-right pt-3 pb-10">서울대학교 서예회 회장 이상연</p>
+        <p className="text-right pt-3 pb-2">서울대학교 서예회 회장 이상연</p>
+        <p className="text-right pb-10">서울대학교 인문대학 고고미술사학과 23학번</p>
 
         <p className="text-gray-900 leading-relaxed" style={{ whiteSpace: "pre-wrap" }}>
         존경하는 내빈 여러분, 그리고 사랑하는 서울대학교 서예회 회원 및 동문 여러분, <br/> <br/>

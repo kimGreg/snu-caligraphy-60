@@ -40,7 +40,7 @@ export default function Header() {
           <Image src={snu_logo} alt="logo" width={47} height={47} />
           <div>
             <h1 className="text-sm font-bold">서울대학교 서예회</h1>
-            <h1 className="text-md font-bold">60주년 기념전</h1>
+            <h1 className="text-md font-bold">창립 60주년 기념전</h1>
           </div>
         </Link>
 

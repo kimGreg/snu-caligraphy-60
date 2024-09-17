@@ -76,9 +76,6 @@ export default function Header() {
         <Link href="/" className="hover:text-gray-300">
             홈
           </Link>
-          <Link href="/about" className="hover:text-gray-300">
-            소개글
-          </Link>
           <Link href="/history" className="hover:text-gray-300">
             연혁
           </Link>
@@ -110,9 +107,6 @@ export default function Header() {
           >
             <Link href="/" onClick={closeMenu} className="block py-2 hover:text-gray-300">
               홈
-            </Link>
-            <Link href="/about" onClick={closeMenu} className="block py-2 hover:text-gray-300">
-              소개글
             </Link>
             <Link href="/history" onClick={closeMenu} className="block py-2 hover:text-gray-300">
               연혁

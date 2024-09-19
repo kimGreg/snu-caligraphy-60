@@ -13,7 +13,7 @@ export async function GET(request: Request, { params }: { params: { category: st
     where: { category },
     skip,
     take: limit,
-    orderBy: { createdAt: 'desc' },
+    orderBy: { id: 'asc' },
   });
 
   const total = await prisma.artwork.count({

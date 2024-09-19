@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   const artworks = await prisma.artwork.findMany({
     skip,
     take: limit,
-    orderBy: { createdAt: 'desc' },
+    orderBy: { id: "asc" },
   });
 
   const total = await prisma.artwork.count();

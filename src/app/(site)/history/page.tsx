@@ -1,54 +1,72 @@
-// app/(site)/history/page.tsx
 'use client';
 
 import { useEffect, useRef } from 'react';
 
 const historyData = [
   {
-    year: '19??',
+    year: '1964',
     title: '서울대학교 서예회 창립',
-    description:
-      '서울대학교 서예회가 설립되어 전통 서예의 가치를 계승하고 새로운 서예 예술의 가능성을 모색하기 시작했습니다.',
+    description: '서울대학교 서예회가 동숭동 대학 본부 1층에서 창립되었습니다. 초대 지도 강사: 故 여초 김응현(如初 金膺顯)',
   },
   {
-    year: '2003',
-    title: '김재윤 탄생',
-    description: '김재윤이 태어났습니다.',
+    year: '1965',
+    title: '제1회 서울대학교 서예전 개최',
+    description: '서울대학교 서예전(정기 전시회)이 처음으로 개최되었습니다.',
   },
   {
-    year: '2003',
-    title: '김재윤 탄생',
-    description: '김재윤이 태어났습니다.',
+    year: '1974',
+    title: '제9회 서울대학교 서예전 개최',
+    description: '',
   },
   {
-    year: '2003',
-    title: '김재윤 탄생',
-    description: '김재윤이 태어났습니다.',
+    year: '1975',
+    title: '서울대학교 관악캠퍼스 이전',
+    description: '서울대학교가 관악캠퍼스로 이전하면서, 서예회의 새로운 시대가 시작되었습니다. 제2대 지도 강사: 심정 박주영(心丁 朴周榮)',
   },
   {
-    year: '2003',
-    title: '김재윤 탄생',
-    description: '김재윤이 태어났습니다.',
+    year: '1981',
+    title: '제1회 서울대학교 서예회 동문회 개최',
+    description: '서울대학교 서예회 동문회가 처음으로 개최되었습니다.',
   },
   {
-    year: '2003',
-    title: '김재윤 탄생',
-    description: '김재윤이 태어났습니다.',
+    year: '1982',
+    title: '제3대 지도 강사: 죽생 정범훈(竹生 鄭範勳)',
+    description: '',
   },
   {
-    year: '2003',
-    title: '김재윤 탄생',
-    description: '김재윤이 태어났습니다.',
+    year: '1984',
+    title: '창립 20주년 기념전 개최',
+    description: '서울대학교 서예회 창립 20주년을 맞아 기념전이 열렸습니다.',
+  },
+  {
+    year: '1994',
+    title: '창립 30주년 기념전 개최',
+    description: '서울대학교 서예회 창립 30주년 기념전이 개최되었습니다.',
+  },
+  {
+    year: '1999',
+    title: '제4대 지도 강사: 초민 박용설(艸民 朴龍卨)',
+    description: '',
+  },
+  {
+    year: '2002',
+    title: '제5대 지도 강사: 금정초 남기매(欽正艸 南基梅)',
+    description: '',
   },
   {
     year: '2004',
-    title: '이상연 탄신',
-    description: '이상연이 태어났습니다.',
+    title: '창립 40주년 기념전 개최',
+    description: '서울대학교 서예회 창립 40주년 기념전이 개최되었습니다.',
+  },
+  {
+    year: '2014',
+    title: '창립 50주년 기념전 개최',
+    description: '서울대학교 서예회 창립 50주년 기념전이 개최되었습니다.',
   },
   {
     year: '2024',
-    title: '서울대학교 서예회 회갑전',
-    description: '60주년 기념전 개최.',
+    title: '제96회 서울대학교 서예전 및 창립 60주년 기념전 개최',
+    description: '제96회 서울대학교 서예전 및 창립 60주년 기념전이 개최됩니다.',
   },
 ];
 

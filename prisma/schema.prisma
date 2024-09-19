@@ -20,10 +20,10 @@ model Artwork {
   writerDept  String   @default("")
   writerBio   String   @default("")
   style       String   @default("")
+  body        String   @default("")
+  source      String   @default("")
   description String
   imageUrl    String
   category    String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
   imageStyle  String @default("portrait")
 }

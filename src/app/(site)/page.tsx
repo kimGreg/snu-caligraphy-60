@@ -12,7 +12,7 @@ export default function AboutPage() {
         </div>
         <div className="flex justify-center lg:p-10 p-1">
         <div className="space-y-3">
-            <p className="text-lg">
+            <p className="text-lg leading-8">
             안녕하십니까. 서울대학교 중앙동아리 서예회입니다. 
             </p>
 

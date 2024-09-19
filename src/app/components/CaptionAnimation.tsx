@@ -65,7 +65,7 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
       <div className="text-end">
         <h2 ref={titleRef} className="text-2xl mb-3 font-bold fade-in-up">{title}</h2>
         <h4 ref={styleRef} className="text-lg text-gray-800 mb-3 fade-in-up">{style}</h4>
-        <h3 ref={writerRef} className="text-lg mb-10 fade-in-up">{writer} • {writerDept}</h3>
+        <h3 ref={writerRef} className="text-lg mb-10 fade-in-up">{writer}</h3>
       </div>
       {/* 본문 내용과 출전 추가 */}
       <p ref={bodyRef} className="text-lg fade-in-up pb-6" style={{ whiteSpace: "pre-wrap" }}>{body}</p>

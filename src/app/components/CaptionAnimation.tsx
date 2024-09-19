@@ -8,18 +8,22 @@ interface CaptionAnimationProps {
   writer: string;
   writerDept: string;
   writerBio: string;
+  body: string; // 본문 내용
+  source: string; // 출전
   description: string;
 }
 
-export default function CaptionAnimation({ title, style, writer, writerDept, writerBio, description }: CaptionAnimationProps) {
+export default function CaptionAnimation({ title, style, writer, writerDept, writerBio, body, source, description }: CaptionAnimationProps) {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const styleRef = useRef<HTMLHeadingElement | null>(null);
   const writerRef = useRef<HTMLHeadingElement | null>(null);
+  const bodyRef = useRef<HTMLParagraphElement | null>(null);
+  const sourceRef = useRef<HTMLParagraphElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
   const writerBioRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const elements = [titleRef.current, styleRef.current, writerRef.current, descriptionRef.current, writerBioRef.current];
+    const elements = [titleRef.current, styleRef.current, writerRef.current, bodyRef.current, sourceRef.current, descriptionRef.current, writerBioRef.current];
     const options = {
       threshold: 0.1,
     };
@@ -63,9 +67,14 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
         <h4 ref={styleRef} className="text-lg text-gray-800 mb-3 fade-in-up">{style}</h4>
         <h3 ref={writerRef} className="text-lg mb-10 fade-in-up">{writer} • {writerDept}</h3>
       </div>
-      <p ref={descriptionRef} className="text-lg fade-in-up pb-15" style={{ whiteSpace: "pre-wrap" }}>{description}</p>
+      {/* 본문 내용과 출전 추가 */}
+      <p ref={bodyRef} className="text-lg fade-in-up pb-6" style={{ whiteSpace: "pre-wrap" }}>{body}</p>
+      <p ref={sourceRef} className="text-md fade-in-up text-gray-600 italic pb-10">{source}</p>
 
-      <div className="flex justify-start w-full pt-32">
+      {/* 설명 부분 */}
+      <p ref={descriptionRef} className="text-lg fade-in-up pb-2" style={{ whiteSpace: "pre-wrap" }}>{description}</p>
+
+      <div className="flex justify-start w-full pt-5">
         <div ref={writerBioRef} className="writer-bio-card w-full max-w-lg fade-in-up r">
             <div className="writer-header">
             <h2 className="writer-name">{writer}</h2>
@@ -73,13 +82,11 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
             </div>
             <div className="writer-bio-content">
             
-                <p className="writer-bio-text"  style={{ whiteSpace: "pre-wrap" }}>{writerBio}</p>
+                <p className="writer-bio-text" style={{ whiteSpace: "pre-wrap" }}>{writerBio}</p>
             </div>
         </div>
-
       </div>
       
-
       <style jsx>{`
         .fade-in-up {
           opacity: 0;
@@ -101,7 +108,6 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
         }
 
         .writer-header {
-          
           align-items: center;
           justify-content: space-between;
         }
@@ -138,8 +144,6 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
           color: #444;
           line-height: 1.6;
         }
-
-       
       `}</style>
     </div>
   );

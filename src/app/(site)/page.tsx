@@ -10,7 +10,7 @@ export default function AboutPage() {
         <div className="flex justify-center px-0 lg:px-8 pb-10">
             <Image src={title} alt="서울대학교 서예회 창립60주년 기념전" height={500} width={1000}></Image>
         </div>
-        <div className="flex justify-center p-10">
+        <div className="flex justify-center lg:p-10 p-1">
         <div className="space-y-3">
             <p className="text-lg">
             안녕하십니까. 서울대학교 중앙동아리 서예회입니다. 

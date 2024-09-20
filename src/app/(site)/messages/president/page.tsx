@@ -6,7 +6,7 @@ import head from "@/public/president/president.jpeg";
 
 export default function PresidentSpeech() {
   return (
-    <div className="flex justify-center items-center py-5 px-4">
+    <div className="flex justify-center items-center">
       <div className="max-w-2xl w-full flex flex-col lg:flex-row justify-center items-start lg:space-x-6">
         {/* 모바일에서는 상단에, 데스크탑에서는 우측에 이미지 배치 */}
         {/* <div className="flex justify-center lg:order-2 mb-6 lg:mb-0">

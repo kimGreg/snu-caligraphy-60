@@ -17,7 +17,8 @@ export default function Tabs({ tabs }: TabsProps) {
   const pathname = usePathname(); // 현재 경로를 가져오는 클라이언트 사이드 훅
 
   return (
-    <div className="w-full mt-3 mx-auto overflow-x-auto scrollbar-hide">
+    <div className="w-full mt-0 mx-auto overflow-x-auto scrollbar-hide">
+         
       <div className="flex border-b border-gray-300 space-x-4 min-w-max">
         {tabs.map((tab, index) => {
           // 현재 경로와 탭의 경로가 정확히 일치하는지 확인

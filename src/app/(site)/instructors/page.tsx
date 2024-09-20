@@ -5,7 +5,7 @@ const instructors = [
   {
     name: ' 故 여초 김응현(如初 金膺顯)',
     title: '초대 지도강사',
-    bio: '1964년부터 1975년까지 서예회의 초대 지도강사로 활동.',
+    bio: '1964년부터 1975년까지 서예회의  지도강사로 활동.',
   },
   {
     name: '심정 박주영(心丁 朴周榮)',
@@ -33,7 +33,7 @@ export default function InstructorsPage() {
     return (
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-8">역대 지도 강사</h1>
+          <h1 className="text-3xl font-bold text-center mb-8">역대 지도 강사</h1>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {instructors.map((instructor, index) => (
               <div

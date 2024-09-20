@@ -40,7 +40,9 @@ export default function CongratulatorySpeechesLayout({
   
     return (
       <div className="min-h-screen flex flex-col space-y-10 pb-12">
+       
         <nav className="">
+            <h2 className="text-2xl text-snublue pt-5 pb-2">축사</h2>
           <Tabs tabs={tabs} />
         </nav>
         <div className="p-2">

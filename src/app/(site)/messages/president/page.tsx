@@ -1,30 +1,65 @@
 // app/(site)/congratulatory-speeches/chancellor/page.tsx
+
+import Image from "next/image";
+import sign from "@/public/president/sign.png";
+import head from "@/public/president/president.jpeg";
+
 export default function PresidentSpeech() {
-    return (
-        <div className="flex justify-center items-center">
-        <div className="max-w-2xl justify-center">
-        <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회 60주년 기념전 축사</h2>
+  return (
+    <div className="flex justify-center items-center py-5 px-4">
+      <div className="max-w-2xl w-full flex flex-col lg:flex-row justify-center items-start lg:space-x-6">
+        {/* 모바일에서는 상단에, 데스크탑에서는 우측에 이미지 배치 */}
+        {/* <div className="flex justify-center lg:order-2 mb-6 lg:mb-0">
+          <Image
+            src={head}
+            alt="유홍림"
+            className="rounded-lg"
+            // Tailwind를 이용한 반응형 크기 설정
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            width={400}  // 기본 크기
+            height={400} // 기본 크기
+            style={{ maxWidth: "100%", height: "auto" }} // 반응형으로 크기 조정
+          />
+        </div> */}
 
-        <p className="text-right pt-3 pb-10">서울대학교 총장 유홍림</p>
+        {/* 텍스트 내용 */}
+        <div className="lg:order-1">
+          <h2 className="text-2xl font-bold mb-4 text-center">서예회 60주년 축사</h2>
 
-        <p className="text-gray-900 leading-relaxed" style={{ whiteSpace: "pre-wrap" }}>
-        존경하는 내빈 여러분, 그리고 서울대학교 서예회 회원 여러분, <br/><br/>
+          <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+            안녕하십니까, 서울대학교 총장 유홍림입니다.
+          </p>
+          <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+            유구한 역사와 전통을 자랑하는 서울대학교 서예회의 창립 60주년과 이를 기념하는 회갑전 개최를 진심으로 축하합니다.
+          </p>
+          <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+            예부터 서예는 ‘서여기인(書如其人)’이라 하여 한 사람의 인격과 학식을 나타내는 것으로 여겨졌습니다. 당나라의 서예가 유공권(柳公權)은 “마음이 발라야 붓도 바르게 되며(心正則筆正), 붓이 발라야 서법도 익힐 수 있다(筆正乃可效)”라고 했습니다.
+          </p>
+          <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+            그동안 서울대학교 서예회는 우리 학생들이 서예를 통해 수양(修養)하고, 함께 호연지기(浩然之氣)를 기르는 동아리이자 학당(學堂)으로 역할을 해왔습니다. 서예회에서 절차탁마(切磋琢磨)한 우리 동문들은 서예로 닦은 인격과 지혜로 우리사회의 큰 재목(材木)이 되었습니다.
+          </p>
+          <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+            서예회가 영예로운 60주년을 맞기까지에는 많은 분의 헌신이 있었을 줄로 압니다. 서예회에 정성을 기울여 오신 여러 지도교수님과 강사님께 감사드리며, 선배들의 자랑스러운 전통을 이어가기 위해 구슬땀을 흘려온 우리 학생들에게도 축하와 격려의 마음을 전합니다. 이번 전시를 통해 자랑스러운 역사를 함께 일군 서예회 동문들의 자긍심이 더욱 고취되고, 동문 간의 결속도 더욱 돈독해지길 바랍니다.
+          </p>
+          <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+            다시 한 번 서예회 창립 60주년을 축하드리며, 서울대학교 서예회의 무궁한 발전과 동문 여러분의 건승을 기원합니다.
+          </p>
+          <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+            감사합니다.
+          </p>
 
-        &emsp;오늘 우리는 서울대학교 서예회 60주년 기념전을 함께 축하하기 위해 모였습니다. 지난 60년간 서울대학교 서예회는 전통과 현대를 아우르는 서예 예술의 중심에서 한국 서예의 발전을 이끌어왔습니다. 서예회가 걸어온 길은 단순히 붓을 움직이는 행위가 아니라, 우리 전통 문화의 심오한 정신을 계승하고 발전시키는 중요한 여정이었습니다.<br/><br/>
+          <p className="pb-10">
+            <center>2024년 9월 24일</center>
+          </p>
 
-        &emsp;서울대학교 서예회는 오랜 시간 동안 학생들과 교직원, 그리고 외부 전문가들이 함께 모여 예술적 교류와 성장을 이루어온 곳입니다. 이곳에서는 서예의 기본적인 기술뿐만 아니라, 예술가로서의 자아를 탐구하고, 우리의 정체성을 글씨에 담아내는 방법을 배웠습니다. 서예회가 배출한 수많은 인재들은 각자의 자리에서 서예와 관련된 다양한 분야에서 활발히 활동하며, 우리의 전통 문화를 널리 알리고 있습니다.<br/><br/>
-
-        &emsp;이번 60주년 기념전은 서예회의 발자취를 돌아보는 동시에, 앞으로 나아갈 방향을 모색하는 중요한 자리입니다. 서예는 단순한 글쓰기 이상의 예술이며, 이를 통해 우리는 우리의 역사, 문화, 그리고 정신을 다시 한번 되새기게 됩니다. 이번 전시를 통해 보여지는 작품들은 단순한 붓놀림을 넘어서, 작가들의 깊은 사유와 정성을 담고 있으며, 이를 감상하는 모든 이들에게 큰 울림을 줄 것입니다.<br/><br/>
-
-        &emsp;서예회의 발전은 결코 혼자의 힘으로 이루어진 것이 아닙니다. 그동안 아낌없는 지원을 해주신 지도 교수님들, 헌신적인 노력을 아끼지 않으신 동문 선배님들, 그리고 열정과 끈기로 예술적 성장을 이뤄온 회원 여러분 모두가 있었기에 가능한 일이었습니다. 여러분의 땀과 열정이 있었기에 오늘의 서울대학교 서예회가 존재할 수 있었습니다. 진심으로 감사의 말씀을 전합니다.<br/><br/>
-
-        &emsp;마지막으로, 이번 기념전이 서울대학교 서예회의 새로운 출발점이 되기를 바랍니다. 오늘 이 자리를 통해 과거의 업적을 기념하고, 앞으로 다가올 미래를 설계하는 귀중한 시간이 되길 기대합니다. 다시 한번 서예회의 60주년을 진심으로 축하드리며, 앞으로의 무궁한 발전을 기원합니다.<br/><br/>
-
-        감사합니다.
-        </p>
-
-       
+          <div className="w-full flex justify-end">
+            <div className="grid grid-cols-2 gap-1 items-center">
+              <p>서울대학교 총장</p>
+              <Image src={sign} height={60} width={80} alt="유홍림" />
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-    );
-  }
+    </div>
+  );
+}

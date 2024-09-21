@@ -2,6 +2,7 @@
 import prisma from '@/db';
 import Link from 'next/link';
 import { Artwork } from '@prisma/client';
+import ArtworkCard from '@/app/components/ArtworkCard';
 
 async function getArtworks() {
     // SQL의 랜덤 정렬 기능을 활용하여 각 카테고리별로 3개의 작품을 랜덤하게 선택
@@ -54,19 +55,7 @@ export default async function WorksPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {studentWorks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-              <div className="relative overflow-hidden rounded-lg shadow-lg bg-white transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative w-full h-64">
-                  <img
-                    src={artwork.imageUrl}
-                    alt={artwork.title}
-                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-800">{artwork.writer}</p>
-                </div>
-              </div>
+              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>
@@ -79,19 +68,7 @@ export default async function WorksPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {alumniWorks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-              <div className="relative overflow-hidden rounded-lg shadow-lg bg-white transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative w-full h-64">
-                  <img
-                    src={artwork.imageUrl}
-                    alt={artwork.title}
-                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-800">{artwork.writer}</p>
-                </div>
-              </div>
+              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>
@@ -104,19 +81,7 @@ export default async function WorksPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {supportWorks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-              <div className="relative overflow-hidden rounded-lg shadow-lg bg-white transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative w-full h-64">
-                  <img
-                    src={artwork.imageUrl}
-                    alt={artwork.title}
-                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-800">{artwork.writer}</p>
-                </div>
-              </div>
+              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>
@@ -129,19 +94,7 @@ export default async function WorksPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {instructorWorks.map((artwork) => (
             <Link href={`/works/instructor`} key={artwork.id} className="group">
-              <div className="relative overflow-hidden rounded-lg shadow-lg bg-white transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative w-full h-64">
-                  <img
-                    src={artwork.imageUrl}
-                    alt={artwork.title}
-                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{artwork.title}</h3>
-                  <p className="text-sm text-gray-800">{artwork.writer}</p>
-                </div>
-              </div>
+              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>

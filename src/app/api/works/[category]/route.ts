@@ -14,6 +14,12 @@ export async function GET(request: Request, { params }: { params: { category: st
     skip,
     take: limit,
     orderBy: { id: 'asc' },
+    select: {
+        title: true,
+        writer: true,
+        imageUrl: true,
+        id: true,
+    }
   });
 
   const total = await prisma.artwork.count({

@@ -33,7 +33,7 @@ export default function InstructorsPage() {
     return (
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold text-center mb-8">역대 지도 강사</h1>
+          <h1 className="text-3xl mb-8">역대 지도 강사</h1>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {instructors.map((instructor, index) => (
               <div

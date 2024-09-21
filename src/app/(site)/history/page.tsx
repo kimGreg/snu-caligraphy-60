@@ -105,7 +105,7 @@ export default function HistoryPage() {
   return (
     <section className="py-10 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-8">서예회 연혁</h1>
+        <h1 className="text-3xl  mb-8">서예회 연혁</h1>
         <div className="relative border-l-4 border-snublue pl-6">
           {historyData.map((event, index) => (
             <div

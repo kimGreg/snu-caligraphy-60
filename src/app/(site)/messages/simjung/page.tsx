@@ -6,10 +6,16 @@ export default function AlumniPresidentSpeech() {
     return (
         <div className="flex justify-center items-center">
         <div className="max-w-2xl justify-center">
-        <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회의 연원과 그 방향</h2>
+
+        {/* President image next to title */}
+        <div className="flex flex-wrap">
+        <h2 className="text-2xl font-bold  mb-4">서울대학교 서예회의&nbsp;</h2>
+        <h2 className="text-2xl font-bold  mb-4">연원과 그 방향</h2>
+        </div>
 
         <p className="text-right pt-3 pb-2">심정(心丁) 박주영(朴周榮) </p>
-        <p className="text-right pb-10">서울대 미대 회화과 66학번 / 한국교원대학교 명예교수</p>
+        <p className="text-right pb-1">서울대 미대 회화과 66학번</p>
+        <p className="text-right pb-10">한국교원대학교 명예교수</p>
 
         <div className="w-full flex justify-center p-10">
         <Image src={nakgwan} alt="낙관" height={300} width={300} 

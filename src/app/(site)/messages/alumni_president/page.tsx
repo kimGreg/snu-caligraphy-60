@@ -8,18 +8,33 @@ export default function AlumniPresidentSpeech() {
     return (
         <div className="flex justify-center items-center">
         <div className="max-w-2xl justify-center">
-            <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회 3대 기록</h2>
-
-            <p className="text-right pt-3 pb-2">서울대학교 서예회 총동창회장 故 대행(大行) 노태천(盧泰天)</p>
-            <p className="text-right pb-10">서울대학교 공과대학 공업교육과 69학번</p>
-
-            <div className="w-full flex justify-center p-5">
-            <Image src={notaechune} alt="故 대행(大行) 노태천(盧泰天)" height={150} width={150} 
-                style={{
-                    objectFit: 'cover',
-                    objectPosition: '50% 50%',
-                }}></Image>
+            <div className="w-full flex justify-between items-start space-x-4 pb-3">
+            {/* President image next to title */}
+            <div className="flex flex-wrap">
+            <h2 className="text-2xl font-bold">서울대학교 서예회&nbsp;</h2>
+            <h2 className="text-2xl font-bold">3대 기록</h2>
             </div>
+           
+            <div className="w-24 h-24">
+            <Image
+              src={notaechune}
+              alt="故 대행(大行) 노태천(盧泰天)"
+              className="rounded-lg"
+              width={100} // Thumbnail size
+              height={100}
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+            </div>
+            </div>
+
+            <h2 className="text-2xl font-bold mb-4 text-center"></h2>
+
+            <div className="w-full flex flex-wrap justify-end pt-3">
+            <p className="text-right pb-2">서울대학교 서예회 총동창회장&nbsp;</p>
+            <p className="text-right pb-2">故 대행(大行) 노태천(盧泰天)</p>
+            </div>
+            
+            <p className="text-right pb-10">서울대학교 공과대학 공업교육과 69학번</p>
 
             <p className="text-gray-900 leading-relaxed">
             &emsp;서울대 서예회가 창립된 해는 1964년 가을 무렵이었다. 1963년 시작된 박정희 정권 한일 협상 반대 운동을 기점으로, 당시 서울시의 여러 곳에 산재하던 선배들이 동숭동 문리과대학 캠퍼스에 자주 모여 회동하였고, 이후 지인들끼리 다른 회동 장소를 협의하던 중에 의과대학 내 함춘식당에서 정기적인 모임을 갖기 시작하였다.<br/>

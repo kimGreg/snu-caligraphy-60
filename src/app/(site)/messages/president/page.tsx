@@ -7,25 +7,25 @@ import head from "@/public/president/president.jpeg";
 export default function PresidentSpeech() {
   return (
     <div className="flex justify-center items-center">
-      <div className="max-w-2xl w-full flex flex-col lg:flex-row justify-center items-start lg:space-x-6">
-        {/* 모바일에서는 상단에, 데스크탑에서는 우측에 이미지 배치 */}
-        {/* <div className="flex justify-center lg:order-2 mb-6 lg:mb-0">
-          <Image
-            src={head}
-            alt="유홍림"
-            className="rounded-lg"
-            // Tailwind를 이용한 반응형 크기 설정
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            width={400}  // 기본 크기
-            height={400} // 기본 크기
-            style={{ maxWidth: "100%", height: "auto" }} // 반응형으로 크기 조정
-          />
-        </div> */}
+      <div className="max-w-2xl w-full flex flex-col justify-center items-start space-y-6">
+        {/* Flexbox to position image next to title */}
+        <div className="w-full flex justify-between items-start space-x-4 pb-10">
+          {/* President image next to title */}
+          <h2 className="text-2xl font-bold">서예회 60주년 축사</h2>
+          <div className="w-24 h-24">
+            <Image
+              src={head}
+              alt="유홍림"
+              className="rounded-lg"
+              width={100} // Thumbnail size
+              height={100}
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
 
-        {/* 텍스트 내용 */}
-        <div className="lg:order-1">
-          <h2 className="text-2xl font-bold mb-4 text-center">서예회 60주년 축사</h2>
-
+        {/* Text content */}
+        <div>
           <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
             안녕하십니까, 서울대학교 총장 유홍림입니다.
           </p>

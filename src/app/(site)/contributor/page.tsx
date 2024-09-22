@@ -107,7 +107,7 @@ export default function InstructorsPage() {
                     이지영(윤리교육과 01)
                 </div>
                 <div className="pb-3">
-                    전시회 준비
+                    전시
                 </div>
                 <div className="pb-10">
                     박소은(동양화과 24)

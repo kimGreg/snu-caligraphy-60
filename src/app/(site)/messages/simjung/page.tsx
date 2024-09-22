@@ -9,8 +9,8 @@ export default function AlumniPresidentSpeech() {
 
         {/* President image next to title */}
         <div className="flex flex-wrap">
-        <h2 className="text-2xl font-bold  mb-4">서울대학교 서예회의&nbsp;</h2>
-        <h2 className="text-2xl font-bold  mb-4">연원과 그 방향</h2>
+        <h2 className="text-2xl font-bold">서울대학교 서예회의&nbsp;</h2>
+        <h2 className="text-2xl font-bold">연원과 그 방향</h2>
         </div>
 
         <p className="text-right pt-3 pb-2">심정(心丁) 박주영(朴周榮) </p>

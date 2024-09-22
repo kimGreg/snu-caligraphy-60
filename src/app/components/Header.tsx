@@ -88,6 +88,9 @@ export default function Header() {
           <Link href="/works" className="hover:text-gray-300">
             작품
           </Link>
+          <Link href="/contributor" onClick={closeMenu} className="block py-2 hover:text-gray-300">
+            사람들
+            </Link>
         </nav>
       </div>
 
@@ -119,6 +122,9 @@ export default function Header() {
             </Link>
             <Link href="/works" onClick={closeMenu} className="block py-2 hover:text-gray-300">
               작품
+            </Link>
+            <Link href="/contributor" onClick={closeMenu} className="block py-2 hover:text-gray-300">
+              사람들
             </Link>
           </div>
         </div>

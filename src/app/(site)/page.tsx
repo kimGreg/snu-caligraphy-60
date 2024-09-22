@@ -5,14 +5,16 @@ import Image from "next/image"
 
 export default function AboutPage() {
   return (
-    <section className="py-10 bg-gray-50  w-full ">
-      <div className="container mx-auto w-full px-2 lg:px-6 ">
-        <div className="flex justify-center px-0 lg:px-8 pb-10">
+    <section className="flex py-10 bg-gray-50  w-full justify-center ">
+      <div className="flex flex-col mx-auto px-2 lg:px-6 justify-center ">
+        <div className="flex w-full justify-center">
+            <div className=" max-w-3xl px-0 lg:px-8 pb-10">
             <Image src={title} alt="서울대학교 서예회 창립60주년 기념전" height={500} width={1000}></Image>
+            </div>
         </div>
-        <div className="flex justify-center lg:p-10 p-1">
-        <div className="space-y-3">
-            <p className="text-lg leading-8">
+        <div className="flex justify-left lg:p-10 p-1">
+        <div className="space-y-8 max-w-3xl">
+            <p className="text-xl leading-8">
             안녕하십니까. 서울대학교 중앙동아리 서예회입니다. 
             </p>
 

@@ -56,6 +56,10 @@ export default function EditArtworkPage({ params }: { params: { id: string } }) 
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    if((name=="prevWork" || name=="nextWork" || name=="order")) {   
+        setArtwork((prevArtwork) => (prevArtwork ? { ...prevArtwork, [name]: (value == "0" ? null : Number(value)) } : null));
+        return;
+    }
     setArtwork((prevArtwork) => (prevArtwork ? { ...prevArtwork, [name]: value } : null));
   };
 
@@ -181,6 +185,26 @@ export default function EditArtworkPage({ params }: { params: { id: string } }) 
               type="number"
               name="order"
               value={artwork.order}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+            />
+          </label>
+          <label>
+            이전작품
+            <input
+              type="number"
+              name="prevWork"
+              value={artwork.prevWork??0}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+            />
+          </label>
+          <label>
+            다음작품
+            <input
+              type="number"
+              name="nextWork"
+              value={artwork.nextWork??0}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md p-2"
             />

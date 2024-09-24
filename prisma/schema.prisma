@@ -27,4 +27,6 @@ model Artwork {
   category    String
   imageStyle  String @default("portrait")
   order       Int    @default(1)
+  prevWork    Int?
+  nextWork    Int?
 }

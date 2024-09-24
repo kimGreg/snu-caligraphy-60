@@ -2,6 +2,7 @@ import prisma from "@/db";
 import Lightbox from "@/app/components/lightbox";
 import { notFound } from 'next/navigation';
 import CaptionAnimation from "@/app/components/CaptionAnimation";
+import Link from "next/link";
 
 // 개별 작품을 가져오는 함수
 async function getArtwork(id: string) {
@@ -9,6 +10,18 @@ async function getArtwork(id: string) {
     where: { id: parseInt(id) },
   });
 }
+
+const LeftArrowIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+    </svg>
+  );
+  
+  const RightArrowIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+    </svg>
+  );
 
 
 export default async function ArtworkDetailPage({ params }: { params: { id: string } }) {
@@ -36,6 +49,18 @@ export default async function ArtworkDetailPage({ params }: { params: { id: stri
           source={artwork.source}
           description={artwork.description}
         />
+        {/* 이전 및 다음 작품 화살표 */}
+      {artwork.prevWork && (
+        <Link href={`/works/${artwork.prevWork}`} className="fixed left-4 top-1/2 transform -translate-y-1/2 text-gray-700 hover:text-blue-500">
+          <LeftArrowIcon />
+        </Link>
+      )}
+      {artwork.nextWork && (
+        <Link href={`/works/${artwork.nextWork}`} className="fixed right-4 top-1/2 transform -translate-y-1/2 text-gray-700 hover:text-blue-500">
+          <RightArrowIcon />
+        </Link>
+      )}
+
       </div>
     </section>
   );

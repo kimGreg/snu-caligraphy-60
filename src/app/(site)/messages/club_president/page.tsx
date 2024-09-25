@@ -1,29 +1,57 @@
 // app/(site)/congratulatory-speeches/president/page.tsx
+import Image from "next/image"
+import face from "@/public/club_president.bmp"
+
+
 export default function ClubPresidentSpeech() {
     return (
         <div className="flex justify-center items-center">
         <div className="max-w-2xl justify-center">
-        <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회 60주년 기념전 축사</h2>
+        <div className="w-full flex justify-between items-start space-x-4 pb-3">
+            {/* President image next to title */}
+                <div className="flex flex-wrap">
+                <h2 className="text-2xl font-bold">서울대학교 서예회 창립 60주년을 기념하며</h2>
+                </div>
+            
+                <div className="w-24 h-24">
+                <Image
+                src={face}
+                alt="남동신"
+                className="rounded-lg"
+                width={100} // Thumbnail size
+                height={100}
+                style={{ maxWidth: "100%", height: "auto" }}
+                />
+                </div>
+            </div>
 
-        <p className="text-right pt-3 pb-2">서울대학교 서예회 회장 이상연</p>
-        <p className="text-right pb-10">서울대학교 인문대학 고고미술사학과 23학번</p>
+            <h2 className="text-2xl font-bold mb-4 text-center"></h2>
+
+            <div className="w-full flex flex-wrap justify-end pt-3">
+            <p className="text-right pb-2">서울대학교 서예회 회장&nbsp;</p>
+            <p className="text-right pb-2">이상연</p>
+            </div>
+
+            <p className="text-right pb-10">인문대학 고고미술사학과 23학번</p>
+            
 
         <p className="text-gray-900 leading-relaxed" style={{ whiteSpace: "pre-wrap" }}>
-        존경하는 내빈 여러분, 그리고 사랑하는 서울대학교 서예회 회원 및 동문 여러분, <br/> <br/>
-
-        오늘 우리는 서울대학교 서예회 60주년 기념전을 맞이하여 이 뜻깊은 자리에 함께 모였습니다. 서예회의 회장으로서 이 자리를 빌려 지난 60년 동안 서예회가 걸어온 길을 되돌아보고, 함께해주신 모든 분들께 감사의 말씀을 전할 수 있어 매우 영광스럽고 감회가 깊습니다. 서예회는 단순한 동아리 이상의 의미를 지니고, 우리의 전통을 지키고 새로운 시대와 소통하며 예술적 가치를 이어가는 중요한 공간이었습니다. <br/> <br/>
-
-        서울대학교 서예회는 수많은 선배와 회원들이 함께 어우러져 전통 서예의 아름다움을 탐구하고, 이를 현대적으로 재해석하는 끊임없는 도전을 이어왔습니다. 이곳에서 우리는 붓을 잡고 글씨를 쓰는 순간순간마다 자신을 돌아보고, 세상과의 소통을 새롭게 배웠습니다. 서예회의 모든 활동과 전시는 단순한 작품의 나열이 아니라, 우리 모두의 열정과 노력이 만들어낸 귀중한 결실입니다. <br/> <br/>
-
-        이번 60주년 기념전은 서예회가 걸어온 길을 기념하며, 앞으로 우리가 나아갈 새로운 방향을 제시하는 중요한 자리입니다. 전시된 작품들은 우리 서예회의 과거와 현재, 그리고 미래를 담아내고 있습니다. 선배님들의 깊은 경험과 지혜, 그리고 후배들의 열정과 도전 정신이 어우러져 하나의 멋진 예술 세계를 만들어내고 있습니다. 이 전시를 통해 많은 분들이 서예의 매력과 서예회의 역사를 느낄 수 있기를 바랍니다. <br/> <br/>
-
-        오늘의 이 자리가 있기까지 함께해주신 모든 분들께 깊은 감사의 말씀을 드립니다. 서예회 지도 교수님들께서 주신 가르침과 지도가 없었다면 지금의 서예회는 존재할 수 없었을 것입니다. 또한, 동문 선배님들의 끊임없는 응원과 후원, 그리고 모든 회원들의 열정이 있었기에 서예회가 60년의 역사를 이어올 수 있었습니다. 이 자리를 빌려 다시 한번 감사드립니다. <br/> <br/>
-
-        앞으로도 서예회는 전통을 이어가며 끊임없이 새로움을 탐구하는 열린 공간이 될 것입니다. 우리 모두의 열정과 노력이 서예회의 미래를 밝게 비출 것입니다. 60주년을 맞이한 오늘이 새로운 출발점이 되어, 앞으로도 서예회가 더욱 발전하고 성장할 수 있도록 많은 관심과 응원을 부탁드립니다. 서울대학교 서예회의 60주년을 진심으로 축하드리며, 앞으로의 무궁한 발전을 기원합니다. <br/> <br/>
-
-        감사합니다.
+        2024년, 오랜 전통과 유구한 역사를 자랑하는 서울대학교 서예회가 창립 60주년을 맞이하였습니다. 갑진년(甲辰年)의 한 해가 가을의 정점에 걸린 가운데, 여러 동문 선배님들을 모시고 서울대학교 서예회 창립 60주년 기념전을 개최하게 되어 매우 영광입니다. 
+        </p>
+        <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+1964년에 창립된 이래로 서울대학교 서예회가 60년 동안 남겨온 세월의 자취는 여타 동아리들에서 찾아볼 수 없는 빛나는 성과물이라고 생각합니다. 관악 캠퍼스로의 이전에서부터 코로나-19에 이르기까지 많은 역동과 역경의 시기를 지나면서도, 서울대학교 서예회만이 가진 전아(典雅)한 서풍과 명맥은 96회에 달하는 서예전 개최를 통해 2024년인 현재까지 이어져 오고 있습니다. 서울대학교 서예회가 이러한 빛나는 자취를 남길 수 있었던 배경에는 많은 동문 선배님들의 노력과 헌신이 있었다고 생각합니다. 그러한 점에서, 이번 서울대학교 서예회 창립 60주년 기념전은 그동안 동문 선배님들께서 기울이신 노력과 헌신을 통해 이룩한 빛나는 성과를 종합하고 공유하는 자리라고 말할 수 있습니다. 
+</p>
+        <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+저는 2024년 서예회 회장을 역임하면서 항상 막중한 책임감을 느끼며, 서울대학교 서예회 창립 60주년 기념전을 성황리에 개최하고자 노력하였습니다. 기념전을 준비하면서 많은 시행착오를 겪기도 하였지만, 물심양면으로 도움을 아끼지 않은 학생 회원들과 진심으로 응원해 주신 동문 선배님들 덕분에 원활하게 기념전을 준비할 수 있었습니다. 서울대학교 서예회 창립 60주년 기념전 준비에 힘써준 학생 회원들께 감사의 말씀을 전합니다. 아울러, 이번 기념전 기획에 큰 도움을 주신 故 노태천 선배님과 김진기 선배님을 비롯한 여러 동문 선배님들과 남동신 지도교수님께도 감사의 말씀을 올립니다.
+</p>
+        <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+마지막으로, 이번 기념전이 1964년 갑진년에서 2024년 갑진년까지 서울대학교 서예회가 이룩한 빛나는 자취를 종합하고 공유하는 것을 넘어 앞으로의 새로운 갑진년을 향해 나아가는 자리가 되길 기원합니다. 감사합니다. 
         </p>
 
+
+        <p className="pb-10 pt-10">
+         <center>2024. 10. 01.</center>
+        </p>
        
       </div>
       </div>

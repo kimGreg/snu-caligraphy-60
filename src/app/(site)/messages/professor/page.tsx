@@ -1,26 +1,53 @@
 // app/(site)/congratulatory-speeches/professor/page.tsx
+import Image from "next/image"
+import face from "@/public/professor.jpeg"
+
 export default function ProfessorSpeech() {
     return (
         <div className="flex justify-center items-center">
         <div className="max-w-2xl justify-center">
-        <h2 className="text-2xl font-bold mb-4 text-center">서울대학교 서예회 60주년 기념전 축사</h2>
+            <div className="w-full flex justify-between items-start space-x-4 pb-3">
+            {/* President image next to title */}
+                <div className="flex flex-wrap">
+                <h2 className="text-2xl font-bold">축사</h2>
+                </div>
+            
+                <div className="w-24 h-24">
+                <Image
+                src={face}
+                alt="남동신"
+                className="rounded-lg"
+                width={100} // Thumbnail size
+                height={100}
+                style={{ maxWidth: "100%", height: "auto" }}
+                />
+                </div>
+            </div>
 
-        <p className="text-right pt-3 pb-10">서울대학교 서예회 지도교수 </p>
+            <h2 className="text-2xl font-bold mb-4 text-center"></h2>
+
+            <div className="w-full flex flex-wrap justify-end pt-3">
+            <p className="text-right pb-2">서울대학교 서예회 지도교수&nbsp;</p>
+            <p className="text-right pb-2">남동신</p>
+            </div>
+            
+            <p className="text-right pb-10">인문대학 국사학과 80학번</p>
 
         <p className="text-gray-900 leading-relaxed">
-        존경하는 내빈 여러분, 사랑하는 서예회 회원 및 동문 여러분, <br/><br/>
+        이번에 서울대학교 서예회가 창립 60주년을 맞이하여 성대한 기념전을 개최하게 된 것을 진심으로 축하합니다.
+        </p>
+        <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+        서울대학교 서예회는 1964년 창립 이래 지금까지 우리나라 서예 문화의 계승과 창달에 이바지하여 왔습니다. 우리 서예회는 한자와 한글의 서체를 두루 수련하되 무엇보다 기본에 충실하고자 하였으며, 동시에 사군자, 전각, 탁본, 배접 등에 이르기까지 실험적인 시도 또한 망설이지 않았습니다. 또한 서예회 회원들은 서예회원으로서의 자긍심을 가지고 각자의 인격을 함양하고 회원 간의 우애와 친목을 다지는 데에도 힘썼습니다. 동문들은 모두 서예회에서 맺은 인연과 학창 시절을 소중하게 간직하고 있습니다.
+        </p>
+        <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+        한편 지난 60년 동안 학내외의 환경이 급변하면서 많은 대학 동아리들이 명멸해갔습니다. 서예회도 때로 어려운 시기가 있었지만, 역대 회장단과 서예회원들의 열정과 헌신적인 노력으로 서예회의 전통을 이어올 수 있었습니다. 물론 이렇게 되기까지에는 동문들의 애정 어린 관심과 격려, 그리고 대학 당국의 물심양면의 지원이 있었습니다. 모든 분들의 노고에 깊이 감사드립니다.  
+        </p>
+        <p className="text-gray-900 leading-relaxed py-2" style={{ whiteSpace: "pre-wrap" }}>
+        그런 점에서 오늘 맞이하는 서울대학교 서예회 창립 60주년 기념전은 서예회로서 뜻깊은 행사일 뿐 아니라, 대학 동아리 차원에서도 실로 기념비적이라고 자부합니다. 동문이자 지도교수로서 이 뜻깊은 기념전에 동참할 수 있게 된 것을 영광스럽게 생각하며, 이번 60주년 기념전을 계기로 서예회가 거듭나서 대학 문화와 서예 문화의 발전에 더욱 기여할 수 있기를 기원합니다.
+        </p>
 
-서울대학교 서예회가 60주년을 맞이하는 오늘, 이 뜻깊은 자리에 함께하게 되어 매우 기쁘고 감회가 깊습니다. 지난 60년 동안 서예회는 단순한 학술 동아리를 넘어, 우리 전통 예술을 지키고 발전시키는 중요한 역할을 수행해 왔습니다. 서예회는 예술적 탐구와 열정이 가득한 공간으로, 많은 인재들이 이곳에서 배움의 길을 닦고, 서예의 깊이를 깨달으며 성장해 왔습니다. <br/><br/>
-
-서예는 우리 고유의 전통을 표현하는 예술이자, 마음을 다해 붓을 움직여 자기 자신을 드러내는 깊은 수양의 과정입니다. 서예회는 이러한 서예의 진정한 가치를 이해하고, 후배들에게 이를 전수하는 훌륭한 교육의 장이 되어 왔습니다. 수많은 회원들이 이곳에서 함께 배우고 고민하며 쌓아온 성과는, 오늘날 서예회가 자랑스러운 전통을 지닌 동아리로 자리 잡게 한 원동력이 되었습니다. <br/><br/>
-
-오늘 열리는 60주년 기념전은 서예회의 오랜 역사를 돌아보고, 앞으로 나아갈 길을 함께 고민하는 소중한 시간입니다. 전시된 작품들은 우리 전통 예술의 아름다움을 고스란히 담아내며, 각 작품 속에는 작가들의 깊은 생각과 정성이 깃들어 있습니다. 이 자리를 통해 서예가 단순한 예술적 표현을 넘어, 마음을 다스리고 세상과 소통하는 중요한 매개체임을 다시 한번 느낄 수 있습니다. <br/><br/>
-
-이 모든 성과는 서예회를 이끌어 온 회원 여러분, 열정적으로 가르침을 주신 지도 교수님들, 그리고 서예회의 가치를 믿고 응원해 주신 동문 여러분의 끊임없는 노력과 헌신 덕분입니다. 여러분의 열정이 서예회를 지금의 자리까지 이끌어왔고, 앞으로도 서예회의 미래를 밝게 비출 것입니다. 진심으로 감사드리며, 우리 서예회의 무한한 발전을 기대합니다. <br/><br/>
-
-앞으로도 서울대학교 서예회가 전통과 현대를 아우르는 서예 예술의 중심에서 더욱 빛나길 바라며, 후배들이 선배들의 발자취를 따라 새로운 도전을 이어갈 수 있기를 소망합니다. 서예회의 60주년을 다시 한번 진심으로 축하드리며, 여러분 모두의 건강과 행복을 기원합니다. <br/><br/>
-
-감사합니다.
+        <p className="pb-10 pt-10">
+         <center>2024. 10. 01.</center>
         </p>
       </div>
       </div>

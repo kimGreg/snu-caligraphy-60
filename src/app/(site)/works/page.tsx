@@ -101,6 +101,12 @@ export default async function WorksPage() {
         <Link href="/works/lists/instructor" className="text-snublue hover:underline">
         모두 보기
         </Link>
+
+        {/* 지도 강사 작품 섹션 */}
+        <h3 className="text-2xl font-semibold mt-8 mb-4">전체 작품 목록</h3>
+        <Link href="/works/whole" className="text-snublue hover:underline">
+        모두 보기
+        </Link>
       </div>
     </section>
   );

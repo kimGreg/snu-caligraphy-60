@@ -4,7 +4,7 @@ import Tabs from '@/app/components/Tabs'
 import { redirect } from 'next/navigation'
 
 export default function CongratulatorySpeeches() {
-    redirect("messages/president");
+    redirect("messages/club_president");
 //   return (
 //     <section className="py-10 bg-gray-50">
 //       <div className="container mx-auto">

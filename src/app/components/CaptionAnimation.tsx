@@ -23,10 +23,15 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
   const writerBioRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const elements = [titleRef.current, styleRef.current, writerRef.current, bodyRef.current, sourceRef.current, descriptionRef.current, writerBioRef.current];
-    const options = {
-      threshold: 0.1,
-    };
+    const elements = [
+      titleRef.current,
+      styleRef.current,
+      writerRef.current,
+      bodyRef.current,
+      sourceRef.current,
+      descriptionRef.current,
+      writerBioRef.current,
+    ];
 
     elements.forEach((element) => {
       if (element) {
@@ -34,30 +39,14 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
       }
     });
 
-    const runAnimation = (entry: IntersectionObserverEntry, index: number) => {
+    elements.forEach((element, index) => {
       setTimeout(() => {
-        entry.target.classList.add('show');
-      }, index * 300);
-    };
-
-    const callback = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          runAnimation(entry, index);
-          observer.unobserve(entry.target);
+        if (element) {
+          element.classList.add('show');
         }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-
-    elements.forEach((element) => {
-      if (element) observer.observe(element);
+      }, index * 500); // 각 요소가 500ms 간격으로 나타나게 설정
     });
 
-    return () => {
-      observer.disconnect();
-    };
   }, []);
 
   return (
@@ -76,14 +65,13 @@ export default function CaptionAnimation({ title, style, writer, writerDept, wri
 
       <div className="flex justify-start w-full pt-5">
         <div ref={writerBioRef} className="writer-bio-card w-full max-w-lg fade-in-up r">
-            <div className="writer-header">
+          <div className="writer-header">
             <h2 className="writer-name">{writer}</h2>
             <p className="writer-department">{writerDept}</p>
-            </div>
-            <div className="writer-bio-content">
-            
-                <p className="writer-bio-text" style={{ whiteSpace: "pre-wrap" }}>{writerBio}</p>
-            </div>
+          </div>
+          <div className="writer-bio-content">
+            <p className="writer-bio-text" style={{ whiteSpace: "pre-wrap" }}>{writerBio}</p>
+          </div>
         </div>
       </div>
       

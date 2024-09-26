@@ -69,7 +69,7 @@ export default function InstructorsPage() {
                     지도강사
                 </div>
                 <div className="pb-10">
-                김응현&nbsp;&nbsp;
+                故김응현&nbsp;&nbsp;
                 박용설(체육교육과 67)&nbsp;&nbsp;
                 남기매&nbsp;&nbsp;
                 박주영(미술대학 66)&nbsp;&nbsp;
@@ -88,7 +88,7 @@ export default function InstructorsPage() {
                 이성우&nbsp;&nbsp;
                 이정우(예일회)&nbsp;&nbsp;
                 최주완(예일회)&nbsp;&nbsp;
-                홍광현(미술대학 86)&nbsp;&nbsp;
+                홍광현(미술대학 86)
                 </div>
             </div>
 

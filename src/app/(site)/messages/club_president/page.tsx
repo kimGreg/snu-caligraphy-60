@@ -7,10 +7,11 @@ export default function ClubPresidentSpeech() {
     return (
         <div className="flex justify-center items-center">
         <div className="max-w-2xl justify-center">
-        <div className="w-full flex justify-between items-start space-x-4 pb-3">
+        <div className="w-full flex justify-between items-start space-x-2 pb-3">
             {/* President image next to title */}
                 <div className="flex flex-wrap">
-                <h2 className="text-2xl font-bold">서울대학교 서예회 창립 60주년을 기념하며</h2>
+                <h2 className="text-2xl font-bold">서울대학교 서예회 창립&nbsp;</h2>
+                <h2 className="text-2xl font-bold">60주년을 기념하며</h2>
                 </div>
             
                 <div className="w-24 h-24">
@@ -25,9 +26,7 @@ export default function ClubPresidentSpeech() {
                 </div>
             </div>
 
-            <h2 className="text-2xl font-bold mb-4 text-center"></h2>
-
-            <div className="w-full flex flex-wrap justify-end pt-3">
+            <div className="w-full flex flex-wrap justify-end pt-6">
             <p className="text-right pb-2">서울대학교 서예회 회장&nbsp;</p>
             <p className="text-right pb-2">이상연</p>
             </div>

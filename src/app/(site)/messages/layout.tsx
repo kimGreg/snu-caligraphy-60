@@ -5,6 +5,10 @@ import Tabs from '@/app/components/Tabs';
 
 const tabs = [
     {
+        label: '모시는 글',
+        path: '/messages/club_president',
+    },
+    {
       label: '서울대학교 총장',
       path: '/messages/president',
     },
@@ -15,14 +19,10 @@ const tabs = [
     {
         label: '심정 박주영',
         path: '/messages/simjung',
-      },
+    },
     {
       label: '지도교수',
       path: '/messages/professor',
-    },
-    {
-      label: '서예회장',
-      path: '/messages/club_president',
     },
   ];
 

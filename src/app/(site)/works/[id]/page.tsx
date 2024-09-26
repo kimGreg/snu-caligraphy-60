@@ -3,6 +3,7 @@ import Lightbox from "@/app/components/lightbox";
 import { notFound } from 'next/navigation';
 import CaptionAnimation from "@/app/components/CaptionAnimation";
 import Link from "next/link";
+import { get_image_url } from "@/app/util";
 
 // 개별 작품을 가져오는 함수
 async function getArtwork(id: string) {
@@ -37,7 +38,7 @@ export default async function ArtworkDetailPage({ params }: { params: { id: stri
     <section className="py-10">
       <div className={`max-w-6xl mx-auto p-2 lg:p-6 flex ${isLandscape ? 'flex-col' : 'flex-col lg:flex-row'} gap-8`}>
         <div className={`relative ${isLandscape ? 'w-full' : 'flex-1'}  overflow-hidden rounded-lg mb-6 max-w-full max-h-[80vh] mx-auto`}>
-          <Lightbox imageUrl={artwork.imageUrl} altText={artwork.title} />
+          <Lightbox imageUrl={get_image_url(String(artwork.id), true)} altText={artwork.title} />
         </div>
         <CaptionAnimation
           title={artwork.title}

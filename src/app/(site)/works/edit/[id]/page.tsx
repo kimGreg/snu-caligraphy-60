@@ -150,16 +150,6 @@ export default function EditArtworkPage({ params }: { params: { id: string } }) 
             />
           </label>
           <label>
-            사진 URL
-            <input
-              type="text"
-              name="imageUrl"
-              value={artwork.imageUrl}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-            />
-          </label>
-          <label>
             분류 (student, alumni, support, instructor)
             <input
               type="text"

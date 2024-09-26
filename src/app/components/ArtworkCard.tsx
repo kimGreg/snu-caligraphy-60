@@ -1,12 +1,13 @@
-
+import { get_image_url } from "../util";
 
 interface ArtworkCardProps {
-  imageUrl: string;
+  id: string;
   title: string;
   writer: string;
 }
 
-export default function ArtworkCard({ imageUrl, title, writer }: ArtworkCardProps) {
+export default function ArtworkCard({ id, title, writer }: ArtworkCardProps) {
+  const imageUrl = get_image_url(id, false)
   return (
     <div className="relative overflow-hidden rounded-lg shadow-lg bg-white transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
         <div className="relative w-full h-64">

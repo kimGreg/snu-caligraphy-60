@@ -9,7 +9,7 @@ const notoSerifKr = Noto_Serif_KR({
     weight: ["200", "400", "700", "900"], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
     display: "swap"
 })
-  
+
 
 export default function RootLayout({
   children,

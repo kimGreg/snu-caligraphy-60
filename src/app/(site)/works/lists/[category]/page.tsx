@@ -11,7 +11,6 @@ export default async function CategoryWorksPage({ params }: { params: { category
     select: {
         title: true,
         writer: true,
-        imageUrl: true,
         id: true,
     }
   });
@@ -22,6 +21,7 @@ export default async function CategoryWorksPage({ params }: { params: { category
     alumni: '졸업생 작품',
     support: '찬조 작품',
     instructor: '지도 강사 작품',
+    online: '온라인 전시 작품'
   };
 
   return <section className="bg-gray-50 py-10">
@@ -30,7 +30,7 @@ export default async function CategoryWorksPage({ params }: { params: { category
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {artworks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-            <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
+            <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
         ))}
         </div>

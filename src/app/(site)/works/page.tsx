@@ -37,13 +37,21 @@ async function getArtworks() {
       ORDER BY RANDOM()
       LIMIT 3;
     `;
+
+    const onlineWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
+        SELECT *
+        FROM "public"."Artwork"
+        WHERE category = 'online'
+        ORDER BY RANDOM()
+        LIMIT 3;
+    `;
   
-    return { studentWorks, alumniWorks, supportWorks, instructorWorks };
+    return { studentWorks, alumniWorks, supportWorks, instructorWorks, onlineWorks };
   }
   
 
 export default async function WorksPage() {
-  const { studentWorks, alumniWorks, supportWorks, instructorWorks } = await getArtworks();
+  const { studentWorks, alumniWorks, supportWorks, instructorWorks, onlineWorks } = await getArtworks();
 
   return (
     <section className="bg-gray-50 py-10">
@@ -55,7 +63,7 @@ export default async function WorksPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {studentWorks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
+              <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>
@@ -68,7 +76,7 @@ export default async function WorksPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {alumniWorks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
+              <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>
@@ -81,7 +89,7 @@ export default async function WorksPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {supportWorks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
+              <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>
@@ -93,12 +101,25 @@ export default async function WorksPage() {
         <h3 className="text-2xl font-semibold mt-8 mb-4">지도 강사 작품</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {instructorWorks.map((artwork) => (
-            <Link href={`/works/instructor`} key={artwork.id} className="group">
-              <ArtworkCard imageUrl={artwork.imageUrl} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
+            <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
+              <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>
           ))}
         </div>
         <Link href="/works/lists/instructor" className="text-snublue hover:underline">
+        모두 보기
+        </Link>
+
+        {/* 온라인 작품 섹션 */}
+        <h3 className="text-2xl font-semibold mt-8 mb-4">온라인 전시 작품</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
+          {onlineWorks.map((artwork) => (
+            <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
+              <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
+            </Link>
+          ))}
+        </div>
+        <Link href="/works/lists/online" className="text-snublue hover:underline">
         모두 보기
         </Link>
 

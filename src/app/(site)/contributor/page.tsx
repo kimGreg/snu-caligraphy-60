@@ -10,85 +10,85 @@ export default function InstructorsPage() {
                 재학생
                 </div>
                 <div className="pb-10 text-justify">
-                권대헌(자유전공학부 19)&nbsp;&nbsp;
-                권영빈(건설환경공학부 22)&nbsp;&nbsp;
-                권정해(동양사학과 18)&nbsp;&nbsp;
-                김나영(화학부 22)&nbsp;&nbsp;
-                김민지(공예과 19)&nbsp;&nbsp;
-                김태륜(물리교육과 17)&nbsp;&nbsp;
-                박경준(기계공학부 24)&nbsp;&nbsp;
-                배승빈(건설환경공학부 19)&nbsp;&nbsp;
-                뱅상(컴퓨터공학부 석사 22)&nbsp;&nbsp;
-                신지우(경영학과 22)&nbsp;&nbsp;
-                옥윤찬(동양화과 24)&nbsp;&nbsp;
-                유경민(재료공학부 22)&nbsp;&nbsp;
-                이동훈(산림과학부 22)&nbsp;&nbsp;
-                이상연(고고미술사학과 23)&nbsp;&nbsp;
-                이시은(화학생물공학부 23)&nbsp;&nbsp;
-                이하은(국사학과 22)&nbsp;&nbsp;
-                장능관(재료공학부 21)&nbsp;&nbsp;
-                장세은(약학대학 21)&nbsp;&nbsp;
-                전지현(공예과 19)&nbsp;&nbsp;
-                정재헌(생명과학부 23)&nbsp;&nbsp;
-                조상연(경제학부 18)
+                권대헌&nbsp;
+                권영빈&nbsp;
+                권정해&nbsp;
+                김나영&nbsp;
+                김민지&nbsp;
+                김태륜&nbsp;
+                박경준&nbsp;
+                배승빈&nbsp;
+                뱅상&nbsp;
+                신지우&nbsp;
+                옥윤찬&nbsp;
+                유경민&nbsp;
+                이동훈&nbsp;
+                이상연&nbsp;
+                이시은&nbsp;
+                이하은&nbsp;
+                장능관&nbsp;
+                장세은&nbsp;
+                전지현&nbsp;
+                정재헌&nbsp;
+                조상연
                 </div>
                 <div className="pb-3">
                     졸업생
                 </div>
                 <div className="pb-10 text-justify">
-                강명희(동양사학과 73)&nbsp;&nbsp;
-                김진기(전기공학과 80)&nbsp;&nbsp;
-                남동신(국사학과 80)&nbsp;&nbsp;
-                故노태천(공업교육과 69)&nbsp;&nbsp;
-                박관규(경제학부 78)&nbsp;&nbsp;
-                박문주(심리학과 12)&nbsp;&nbsp;
-                박혜원(가정관리학과 76)&nbsp;&nbsp;
-                방근화(국어교육과 96)&nbsp;&nbsp;
-                변지원(중어중문학과 90)&nbsp;&nbsp;
-                성환진(금속공학과 86)&nbsp;&nbsp;
-                소수경(수리과학부 15)&nbsp;&nbsp;
-                안미정(약학대학 87)&nbsp;&nbsp;
-                양재균(화학과 86)&nbsp;&nbsp;
-                엄태영(기계공학과 86)&nbsp;&nbsp;
-                오희정(심품영양학과 09)&nbsp;&nbsp;
-                이강록(철학과 88)&nbsp;&nbsp;
-                이기영(치의학과 69)&nbsp;&nbsp;
-                이나라(에너지자원공학부 05)&nbsp;&nbsp;
-                이한결(기계항공공학부 07)&nbsp;&nbsp;
-                장기택(치의학과 80)&nbsp;&nbsp;
-                장덕수(건축공학과 66)&nbsp;&nbsp;
-                정광수(독어교육과 80)&nbsp;&nbsp;
-                정종섭(법과대학 77)&nbsp;&nbsp;
-                조병훈(농과대학 82)&nbsp;&nbsp;
-                최고(경제학부 00)&nbsp;&nbsp;
-                최유진(의과대학 14)&nbsp;&nbsp;
-                허선(의과대학 76)&nbsp;&nbsp;
-                홍은정(식품영양학과 90)
+                강명희&nbsp;
+                김진기&nbsp;
+                남동신&nbsp;
+                故노태천&nbsp;
+                박관규&nbsp;
+                박문주&nbsp;
+                박혜원&nbsp;
+                방근화&nbsp;
+                변지원&nbsp;
+                성환진&nbsp;
+                소수경&nbsp;
+                안미정&nbsp;
+                양재균&nbsp;
+                엄태영&nbsp;
+                오희정&nbsp;
+                이강록&nbsp;
+                이기영&nbsp;
+                이나라&nbsp;
+                이한결&nbsp;
+                장기택&nbsp;
+                장덕수&nbsp;
+                정광수&nbsp;
+                정종섭&nbsp;
+                조병훈&nbsp;
+                최고&nbsp;
+                최유진&nbsp;
+                허선&nbsp;
+                홍은정
                 </div>
                 <div className="pb-3">
                     지도강사
                 </div>
                 <div className="pb-10 text-justify">
-                故김응현&nbsp;&nbsp;
-                박용설(체육교육과 67)&nbsp;&nbsp;
-                남기매&nbsp;&nbsp;
-                박주영(미술대학 66)&nbsp;&nbsp;
-                정범훈(경영대학 76)
+                故김응현&nbsp;
+                박용설&nbsp;
+                남기매&nbsp;
+                박주영&nbsp;
+                정범훈
                 </div>
                 <div className="pb-3">
                     찬조
                 </div>
                 <div className="pb-10 text-justify">
-                권숙일(물리천문학교 명예교수)&nbsp;&nbsp;
-                권순민(예일회)&nbsp;&nbsp;
-                김동진(체육교육과 명예교수)&nbsp;&nbsp;
-                손희정(양재균 지인)&nbsp;&nbsp;
-                양일모(자유전공학부 교수)&nbsp;&nbsp;
-                이기석(법과대학 84)&nbsp;&nbsp;
-                이성우&nbsp;&nbsp;
-                이정우(예일회)&nbsp;&nbsp;
-                최주완(예일회)&nbsp;&nbsp;
-                홍광현(미술대학 86)
+                권숙일&nbsp;
+                권순민&nbsp;
+                김동진&nbsp;
+                손희정&nbsp;
+                양일모&nbsp;
+                이기석&nbsp;
+                이성우&nbsp;
+                이정우&nbsp;
+                최주완&nbsp;
+                홍광현
                 </div>
             </div>
 
@@ -99,28 +99,22 @@ export default function InstructorsPage() {
             <div className="max-w-4xl w-full space-y-10">
             <div className="grid md:grid-cols-2 grid-cols-1">
                 <div className="pb-3">
-                    지도강사•교수
-                </div>
-                <div className="pb-10 text-justify">
-                    ??? ??? ??? ??? ??
-                </div>
-                <div className="pb-3">
                     후원
                 </div>
                 <div className="pb-10 text-justify">
-                    이지영(윤리교육과 01)
+                    이지영
                 </div>
                 <div className="pb-3">
                     전시
                 </div>
                 <div className="pb-10 text-justify">
-                    박소은(동양화과 24)
+                    박소은
                 </div>
                 <div className="pb-3">
                     사이트 제작
                 </div>
                 <div className="pb-10 text-justify">
-                    김재윤(컴퓨터공학부 21)
+                    김재윤
                 </div>
             </div>
 

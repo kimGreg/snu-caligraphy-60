@@ -69,7 +69,11 @@ export default function InstructorsPage() {
                     지도강사
                 </div>
                 <div className="pb-10">
-                    ??? ??? ??? ??? ??
+                김응현&nbsp;&nbsp;
+                박용설(체육교육과 67)&nbsp;&nbsp;
+                남기매&nbsp;&nbsp;
+                박주영(미술대학 66)&nbsp;&nbsp;
+                정범훈(경영대학 76)
                 </div>
                 <div className="pb-3">
                     찬조

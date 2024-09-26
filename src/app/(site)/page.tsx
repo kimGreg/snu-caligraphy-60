@@ -13,8 +13,8 @@ export default function AboutPage() {
             </div>
         </div>
         <div className="flex justify-left lg:p-10 p-1">
-        <div className="space-y-8 max-w-3xl">
-            <p className="text-xl leading-8">
+        <div className="space-y-8 max-w-3xl text-justify">
+            <p className="text-xl leading-8 ">
             안녕하십니까. 서울대학교 중앙동아리 서예회입니다. 
             </p>
 

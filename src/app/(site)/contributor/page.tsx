@@ -9,7 +9,7 @@ export default function InstructorsPage() {
                 <div className="pb-3">
                 재학생
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                 권대헌(자유전공학부 19)&nbsp;&nbsp;
                 권영빈(건설환경공학부 22)&nbsp;&nbsp;
                 권정해(동양사학과 18)&nbsp;&nbsp;
@@ -35,7 +35,7 @@ export default function InstructorsPage() {
                 <div className="pb-3">
                     졸업생
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                 강명희(동양사학과 73)&nbsp;&nbsp;
                 김진기(전기공학과 80)&nbsp;&nbsp;
                 남동신(국사학과 80)&nbsp;&nbsp;
@@ -68,7 +68,7 @@ export default function InstructorsPage() {
                 <div className="pb-3">
                     지도강사
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                 故김응현&nbsp;&nbsp;
                 박용설(체육교육과 67)&nbsp;&nbsp;
                 남기매&nbsp;&nbsp;
@@ -78,7 +78,7 @@ export default function InstructorsPage() {
                 <div className="pb-3">
                     찬조
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                 권숙일(물리천문학교 명예교수)&nbsp;&nbsp;
                 권순민(예일회)&nbsp;&nbsp;
                 김동진(체육교육과 명예교수)&nbsp;&nbsp;
@@ -101,25 +101,25 @@ export default function InstructorsPage() {
                 <div className="pb-3">
                     지도강사•교수
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                     ??? ??? ??? ??? ??
                 </div>
                 <div className="pb-3">
                     후원
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                     이지영(윤리교육과 01)
                 </div>
                 <div className="pb-3">
                     전시
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                     박소은(동양화과 24)
                 </div>
                 <div className="pb-3">
                     사이트 제작
                 </div>
-                <div className="pb-10">
+                <div className="pb-10 text-justify">
                     김재윤(컴퓨터공학부 21)
                 </div>
             </div>

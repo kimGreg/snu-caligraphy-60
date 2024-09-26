@@ -48,7 +48,7 @@ export default async function WorksPage() {
   return (
     <section className="bg-gray-50 py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-8">작품 목록</h2>
+        {/* <h2 className="text-4xl font-bold text-center mb-8">작품 목록</h2> */}
 
         {/* 재학생 작품 섹션 */}
         <h3 className="text-2xl font-semibold mb-4">재학생 작품</h3>

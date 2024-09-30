@@ -1,21 +1,38 @@
 // app/(site)/congratulatory-speeches/alumni-president/page.tsx
 import nakgwan from "@/public/nakgwan_alpha.png"
 import Image from 'next/image';
+import face from "@/public/simjung.png";
 
 export default function AlumniPresidentSpeech() {
     return (
         <div className="flex justify-center items-center">
         <div className="max-w-2xl justify-center">
+            <div className="w-full flex justify-between items-start space-x-2 pb-3">
+                <div className="flex flex-wrap">
+                <h2 className="text-2xl font-bold">서울대학교 서예회의&nbsp;</h2>
+                <h2 className="text-2xl font-bold">연원과 그 방향</h2>
+                </div>
+                <div className="w-24 h-24">
+                <Image
+                src={face}
+                alt="심정 박주영"
+                className="rounded-lg"
+                width={100} // Thumbnail size
+                height={100}
+                style={{ maxWidth: "100%", height: "auto" }}
+                />
+                </div>
+            </div>
 
-        {/* President image next to title */}
-        <div className="flex flex-wrap">
-        <h2 className="text-2xl font-bold">서울대학교 서예회의&nbsp;</h2>
-        <h2 className="text-2xl font-bold">연원과 그 방향</h2>
-        </div>
+            <div className="w-full flex flex-wrap justify-end pt-6">
+            <p className="text-right pb-2">서울대학교 서예회 회장&nbsp;</p>
+            <p className="text-right pt-3 pb-2">심정(心丁) 박주영(朴周榮) </p>
+            </div>
 
-        <p className="text-right pt-3 pb-2">심정(心丁) 박주영(朴周榮) </p>
-        <p className="text-right pb-1">서울대 미대 회화과 66학번</p>
-        <p className="text-right pb-10">한국교원대학교 명예교수</p>
+            <p className="text-right pb-1">서울대 미대 회화과 66학번</p>
+            <p className="text-right pb-10">한국교원대학교 명예교수</p>
+  
+       
 
         <div className="w-full flex justify-center p-10">
         <Image src={nakgwan} alt="낙관" height={300} width={300} 

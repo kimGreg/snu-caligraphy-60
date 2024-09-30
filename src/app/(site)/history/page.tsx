@@ -16,7 +16,7 @@ const historyData = [
     description: '동숭동 대학 본부 1층에서 창립',
   },
   {
-    title: '초대 지도 강사: 故 여초 김응현(如初 金膺顯)',
+    title: '초대 지도 강사: 여초 김응현(如初 金膺顯)',
     description: '',
   },
   {
@@ -59,7 +59,7 @@ const historyData = [
   },
   {
     year: '1982',
-    title: '제3대 지도 강사: 죽생 정범훈(竹生 鄭範勳)',
+    title: '제3대 지도 강사: 죽생 정범훈(竹生 鄭範熏)',
     description: '',
   },
   {
@@ -81,7 +81,7 @@ const historyData = [
   },
   {
     year: '2002',
-    title: '제5대 지도 강사: 금정초 남기매(欽正艸 南基梅)',
+    title: '제5대 지도 강사: 금정초 남기매(嶔正艸 南基梅)',
     description: '',
   },
   {

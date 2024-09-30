@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const instructors = [
   {
-    name: ' 故 여초 김응현(如初 金膺顯)',
+    name: ' 여초 김응현(如初 金膺顯)',
     title: '초대 지도강사',
     bio: '1964-1975',
     path: '/instructors/1',
@@ -17,7 +17,7 @@ const instructors = [
     bio: '1976-1982',
   },
   {
-    name: '죽생 정범훈(竹生 鄭範勳)',
+    name: '죽생 정범훈(竹生 鄭範熏)',
     title: '제3대 지도강사',
     bio: '1982-1999',
   },
@@ -27,9 +27,9 @@ const instructors = [
     bio: '1999-2002',
   },
   {
-    name: '금정초 남기매(欽正艸 南基梅)',
+    name: '금정초 남기매(嶔正艸 南基梅)',
     title: '제5대 지도강사',
-    bio: '2002-20??',
+    bio: '2002-2014',
   },
 ];
 

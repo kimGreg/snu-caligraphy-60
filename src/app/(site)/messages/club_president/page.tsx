@@ -7,7 +7,7 @@ export default function ClubPresidentSpeech() {
     return (
         <div className="flex justify-center items-center">
         <div className="max-w-2xl justify-center">
-        <div className="w-full flex justify-between items-start space-x-2 pb-3">
+            <div className="w-full flex justify-between items-start space-x-2 pb-3">
             {/* President image next to title */}
                 <div className="flex flex-wrap">
                 <h2 className="text-2xl font-bold">서울대학교 서예회 창립&nbsp;</h2>

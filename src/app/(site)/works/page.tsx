@@ -37,21 +37,13 @@ async function getArtworks() {
       ORDER BY RANDOM()
       LIMIT 3;
     `;
-
-    const onlineWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
-        SELECT *
-        FROM "public"."Artwork"
-        WHERE category = 'online'
-        ORDER BY RANDOM()
-        LIMIT 3;
-    `;
   
-    return { studentWorks, alumniWorks, supportWorks, instructorWorks, onlineWorks };
+    return { studentWorks, alumniWorks, supportWorks, instructorWorks };
   }
   
 
 export default async function WorksPage() {
-  const { studentWorks, alumniWorks, supportWorks, instructorWorks, onlineWorks } = await getArtworks();
+  const { studentWorks, alumniWorks, supportWorks, instructorWorks } = await getArtworks();
 
   return (
     <section className="bg-gray-50 py-10">
@@ -111,22 +103,13 @@ export default async function WorksPage() {
         </Link>
 
         {/* 온라인 작품 섹션 */}
-        <h3 className="text-2xl font-semibold mt-8 mb-4">온라인 전시 작품</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
-          {onlineWorks.map((artwork) => (
-            <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
-              <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
-            </Link>
-          ))}
-        </div>
-        <Link href="/works/lists/online" className="text-snublue hover:underline">
-        모두 보기
+        <Link href="/works/online" className="text-lg text-snublue hover:underline">
+        <h2 className="text-2xl font-semibold mt-8 mb-4">온라인 전시실</h2>
         </Link>
 
         {/* 지도 강사 작품 섹션 */}
-        <h3 className="text-2xl font-semibold mt-8 mb-4">전체 작품 목록</h3>
-        <Link href="/works/whole" className="text-snublue hover:underline">
-        모두 보기
+        <Link href="/works/whole" className="text-lg text-snublue hover:underline">
+        <h2 className="text-2xl font-semibold mt-8 mb-4">전체 작품 목록</h2>
         </Link>
       </div>
     </section>

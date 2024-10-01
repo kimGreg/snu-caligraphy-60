@@ -7,7 +7,7 @@ export default async function CategoryWorksPage({ params }: { params: { category
 
   const artworks = await prisma.artwork.findMany({
     where: { category },
-    orderBy: { id: 'asc' },
+    orderBy: { order: 'asc' },
     select: {
         title: true,
         writer: true,

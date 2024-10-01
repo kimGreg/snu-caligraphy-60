@@ -50,8 +50,24 @@ export default async function WorksPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* <h2 className="text-4xl font-bold text-center mb-8">작품 목록</h2> */}
 
+        <h3 className="text-2xl font-semibold mb-4">작품</h3>
+        <div className="mb-4">
+            <Link href={`/works/67`} key={1067} className="group">
+              <ArtworkCard id={String(67)} title={"서울대학교서예회 창립육십주년기념전"} writer={"심정 박주영 (心丁 朴周榮)"} ></ArtworkCard>
+            </Link>
+        </div>
+        <Link href="/works/whole" className="text-xl text-snublue hover:underline">
+          모두 보기
+        </Link>
+
+        <h3 className="text-2xl font-semibold mt-8 mb-4">온라인 전시실</h3>
+        <Link href="/works/online" className="text-xl text-snublue hover:underline">
+          모두 보기
+        </Link>
+
+
         {/* 재학생 작품 섹션 */}
-        <h3 className="text-2xl font-semibold mb-4">재학생 작품</h3>
+        <h3 className="text-2xl font-semibold mt-8 mb-4">재학생 작품</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-4">
           {studentWorks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
@@ -62,6 +78,7 @@ export default async function WorksPage() {
         <Link href="/works/lists/student" className="text-snublue hover:underline">
           모두 보기
         </Link>
+        
 
         {/* 졸업생 작품 섹션 */}
         <h3 className="text-2xl font-semibold mt-8 mb-4">졸업생 작품</h3>
@@ -102,15 +119,7 @@ export default async function WorksPage() {
         모두 보기
         </Link>
 
-        {/* 온라인 작품 섹션 */}
-        <Link href="/works/online" className="text-lg text-snublue hover:underline">
-        <h2 className="text-2xl font-semibold mt-8 mb-4">온라인 전시실</h2>
-        </Link>
 
-        {/* 지도 강사 작품 섹션 */}
-        <Link href="/works/whole" className="text-lg text-snublue hover:underline">
-        <h2 className="text-2xl font-semibold mt-8 mb-4">전체 작품 목록</h2>
-        </Link>
       </div>
     </section>
   );

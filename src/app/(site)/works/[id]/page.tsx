@@ -37,7 +37,7 @@ export default async function ArtworkDetailPage({ params }: { params: { id: stri
   return (
     <section className="py-10">
       <div className={`max-w-6xl mx-auto p-2 lg:p-6 flex ${isLandscape ? 'flex-col' : 'flex-col lg:flex-row'} gap-8`}>
-        <div className={`relative ${isLandscape ? 'w-full' : 'flex-1'}  overflow-hidden rounded-lg mb-6 max-w-full max-h-[80vh] mx-auto`}>
+        <div className={`relative ${isLandscape ? 'w-full' : 'flex-1'}  overflow-hidden mb-6 max-w-full max-h-[80vh] mx-auto`}>
           <Lightbox imageUrl={get_image_url(String(artwork.id), true)} altText={artwork.title} />
         </div>
         <CaptionAnimation

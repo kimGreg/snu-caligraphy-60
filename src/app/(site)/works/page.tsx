@@ -56,13 +56,13 @@ export default async function WorksPage() {
               <ArtworkCard id={String(67)} title={"서울대학교서예회 창립육십주년기념전"} writer={"심정 박주영 (心丁 朴周榮)"} ></ArtworkCard>
             </Link>
         </div>
-        <Link href="/works/whole" className="text-xl text-snublue hover:underline">
-          모두 보기
+        <Link href="/works/whole" className="text-snublue hover:underline">
+          작품 목록
         </Link>
 
         <h3 className="text-2xl font-semibold mt-8 mb-4">온라인 전시실</h3>
-        <Link href="/works/online" className="text-xl text-snublue hover:underline">
-          모두 보기
+        <Link href="/works/online" className="text-snublue hover:underline">
+          바로 가기
         </Link>
 
 

@@ -180,6 +180,7 @@ export default function InstructorsPage() {
                     <div className="pr-2">22 김나영</div>
                     <div className="pr-2">23 이시은</div>
                     <div className="pr-2">24 박경준</div>
+                    <div className="pr-2">24 박소은</div>
                     <div className="pr-2">24 옥윤찬</div>
                     <div className="pr-2">24 장민서</div>
                     <div className="pr-2">24 허소연 </div>

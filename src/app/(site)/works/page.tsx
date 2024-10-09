@@ -1,42 +1,37 @@
-// app/(site)/works/page.tsx
-import prisma from '@/db';
+"use client"
+
 import Link from 'next/link';
-import { Artwork } from '@prisma/client';
 import ArtworkCard from '@/app/components/ArtworkCard';
+import pickRandom from 'pick-random';
+
+import studentWorks_raw from "@/public/Artwork_student.json" 
+import supportWorks_raw from "@/public/Artwork_support.json" 
+import alumniWorks_raw from "@/public/Artwork_alumni.json" 
+import instructorWorks_raw from "@/public/Artwork_instructor.json" 
+
+type Artwork = {
+    id: number;
+    title: string;
+    writer: string;
+    writerDept: string;
+    writerBio: string;
+    style: string;
+    body: string;
+    source: string;
+    description: string;
+    category: string;
+    imageStyle: string;
+    order: number;
+    prevWork: number | null;
+    nextWork: number | null;
+}
 
 async function getArtworks() {
     // SQL의 랜덤 정렬 기능을 활용하여 각 카테고리별로 3개의 작품을 랜덤하게 선택
-    const studentWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
-      SELECT *
-      FROM "public"."Artwork"
-      WHERE category = 'student'
-      ORDER BY RANDOM()
-      LIMIT 3;
-    `;
-  
-    const alumniWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
-      SELECT *
-      FROM "public"."Artwork"
-      WHERE category = 'alumni'
-      ORDER BY RANDOM()
-      LIMIT 3;
-    `;
-  
-    const supportWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
-      SELECT *
-      FROM "public"."Artwork"
-      WHERE category = 'support'
-      ORDER BY RANDOM()
-      LIMIT 3;
-    `;
-  
-    const instructorWorks: Artwork[] = await prisma.$queryRaw<Artwork[]>`
-      SELECT *
-      FROM "public"."Artwork"
-      WHERE category = 'instructor'
-      ORDER BY RANDOM()
-      LIMIT 3;
-    `;
+    const studentWorks: Artwork[] = pickRandom(studentWorks_raw, {count: 3})
+    const alumniWorks: Artwork[] = pickRandom(alumniWorks_raw, {count: 3})
+    const supportWorks: Artwork[] = pickRandom(supportWorks_raw, {count: 3})
+    const instructorWorks: Artwork[] = pickRandom(instructorWorks_raw, {count: 3})
   
     return { studentWorks, alumniWorks, supportWorks, instructorWorks };
   }

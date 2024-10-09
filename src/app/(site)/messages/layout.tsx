@@ -6,7 +6,7 @@ import Tabs from '@/app/components/Tabs';
 const tabs = [
     {
         label: '모시는 글',
-        path: '/messages/club_president',
+        path: '/messages',
     },
     {
       label: '서울대학교 총장',

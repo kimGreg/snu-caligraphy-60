@@ -1,19 +1,22 @@
-import prisma from '@/db';
 import Link from 'next/link';
 import ArtworkCard from '@/app/components/ArtworkCard';
+import artworks from '@/public/Artwork.json';
+
+export async function generateStaticParams() {
+    return [
+        {category: "student"},
+        {category: "alumni"},
+        {category: "support"},
+        {category: "instructor"},
+        {category: "online"},
+    ]
+}
+
 
 export default async function CategoryWorksPage({ params }: { params: { category: string } }) {
   const { category } = params;
 
-  const artworks = await prisma.artwork.findMany({
-    where: { category },
-    orderBy: { order: 'asc' },
-    select: {
-        title: true,
-        writer: true,
-        id: true,
-    }
-  });
+  const filter_artworks = artworks.filter((e)=>{return e.category == category})
 
    // 카테고리에 따른 제목 설정
    const categoryTitle: { [key: string]: string } = {
@@ -28,7 +31,7 @@ export default async function CategoryWorksPage({ params }: { params: { category
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-8">{categoryTitle[category] || '작품 목록'}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {artworks.map((artwork) => (
+        {filter_artworks.map((artwork) => (
             <Link href={`/works/${artwork.id}`} key={artwork.id} className="group">
             <ArtworkCard id={String(artwork.id)} title={artwork.title} writer={artwork.writer} ></ArtworkCard>
             </Link>

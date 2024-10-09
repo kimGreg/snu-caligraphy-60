@@ -1,21 +1,10 @@
-// app/works/page.tsx
+"use client"
 
-import { PrismaClient, Artwork } from '@prisma/client';
 import Link from 'next/link';
-
-const prisma = new PrismaClient();
-
-// 서버에서 작품 목록을 가져오는 함수
-async function getArtworks(): Promise<Artwork[]> {
-  return prisma.artwork.findMany({
-    orderBy: { id: 'asc' },
-  });
-}
+import artworks from "@/public/Artwork.json" assert{type: "json"}
 
 // 작품 목록을 SSR로 렌더링하는 페이지
 export default async function ArtworkListPage() {
-  const artworks = await getArtworks();
-
   return (
     <div className="max-w-6xl mx-auto py-10">
       <h1 className="text-3xl font-bold mb-6">작품 목록</h1>

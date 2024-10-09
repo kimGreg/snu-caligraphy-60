@@ -3,6 +3,7 @@
 import title from "@/public/title/title.png"
 import Image from "next/image"
 
+
 export default function AboutPage() {
   return (
     <section className="flex py-10 bg-gray-50  w-full justify-center ">

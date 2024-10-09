@@ -1,32 +1,34 @@
-import prisma from "@/db";
 import Lightbox from "@/app/components/lightbox";
 import { notFound } from 'next/navigation';
 import CaptionAnimation from "@/app/components/CaptionAnimation";
 import Link from "next/link";
 import { get_image_url } from "@/app/util";
+import artworks from "@/public/Artwork.json" assert {type: "json"}
+
+export async function generateStaticParams() {
+    return artworks.map(e=> ({id : String(e.id)}))
+}
 
 // 개별 작품을 가져오는 함수
-async function getArtwork(id: string) {
-  return await prisma.artwork.findUnique({
-    where: { id: parseInt(id) },
-  });
+function getArtwork(id: number) {
+    return artworks.find((e)=>{return e.id == id})
 }
 
 const LeftArrowIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
     </svg>
-  );
-  
-  const RightArrowIcon = () => (
+);
+
+const RightArrowIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
     </svg>
-  );
+);
 
 
-export default async function ArtworkDetailPage({ params }: { params: { id: string } }) {
-  const artwork = await getArtwork(params.id);
+export default function ArtworkDetailPage({ params }: { params: { id: number } }) {
+  const artwork = getArtwork(params.id);
 
   if (!artwork) {
     return notFound();

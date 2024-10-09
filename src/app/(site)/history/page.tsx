@@ -1,8 +1,5 @@
 'use client';
-
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import history from "@/public/history.bmp"
 
 const historyData = [
   {

@@ -1,4 +1,4 @@
-// app/(site)/congratulatory-speeches/chancellor/page.tsx
+"use clinet"
 
 import Image from "next/image";
 import sign from "@/public/president/sign.png";

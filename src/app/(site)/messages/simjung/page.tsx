@@ -1,4 +1,5 @@
-// app/(site)/congratulatory-speeches/alumni-president/page.tsx
+"use clinet"
+
 import nakgwan from "@/public/nakgwan_alpha.png"
 import Image from 'next/image';
 import face from "@/public/simjung.png";

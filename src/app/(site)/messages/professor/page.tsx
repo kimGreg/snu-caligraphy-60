@@ -1,4 +1,5 @@
-// app/(site)/congratulatory-speeches/professor/page.tsx
+"use clinet"
+
 import Image from "next/image"
 import face from "@/public/professor.jpeg"
 

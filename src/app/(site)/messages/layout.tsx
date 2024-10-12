@@ -1,5 +1,6 @@
 
-// app/(site)/congratulatory-speeches/layout.tsx
+"use clinet"
+
 import { ReactNode } from 'react';
 import Tabs from '@/app/components/Tabs';
 

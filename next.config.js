@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     output: 'export',
-   trailingSlash: true,
+    trailingSlash: true,
     images: {
     unoptimized: true,
       domains: ["snucaligraphy.s3.ap-northeast-2.amazonaws.com"],

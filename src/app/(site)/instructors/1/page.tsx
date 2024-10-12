@@ -1,3 +1,4 @@
+"use clinet"
 
 export default function InstructorsPage() {
     return (

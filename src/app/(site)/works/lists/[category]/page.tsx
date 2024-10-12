@@ -1,3 +1,5 @@
+"use clinet"
+
 import Link from 'next/link';
 import ArtworkCard from '@/app/components/ArtworkCard';
 import artworks from '@/public/Artwork.json';

@@ -1,4 +1,4 @@
-// app/(site)/about/page.tsx
+"use clinet"
 
 import title from "@/public/title/title.png"
 import Image from "next/image"

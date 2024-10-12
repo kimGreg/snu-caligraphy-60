@@ -1,3 +1,5 @@
+"use clinet"
+
 import Lightbox from "@/app/components/lightbox";
 import { notFound } from 'next/navigation';
 import CaptionAnimation from "@/app/components/CaptionAnimation";

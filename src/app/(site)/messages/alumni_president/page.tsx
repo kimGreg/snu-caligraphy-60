@@ -1,5 +1,5 @@
-// app/(site)/congratulatory-speeches/alumni-president/page.tsx
-import nakgwan from "@/public/nakgwan_alpha.png"
+"use clinet"
+
 import Image from 'next/image';
 
 import notaechune from "@/public/notaechun.jpeg"

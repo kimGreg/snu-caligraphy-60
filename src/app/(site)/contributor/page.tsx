@@ -1,3 +1,5 @@
+"use clinet"
+
 export default function InstructorsPage() {
     return (
       <section className="py-10 bg-gray-50">

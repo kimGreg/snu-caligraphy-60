@@ -1,3 +1,5 @@
+"use clinet"
+
 import { get_image_url } from "../util";
 
 interface ArtworkCardProps {
